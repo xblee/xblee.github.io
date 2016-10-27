@@ -84,12 +84,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="命令行shellshell 就是一个程序，接收键盘输入的命令，传给操作系统去执行几乎所有的 Linux 都提供了一个名为 bash 的 shell 程序
+终端仿真器当使用图形用户界面时，我们需要另一个和 shell 交互的叫做终端仿真器的程序。 在 Windows 上，一般使用操作系统自带的 cmd 或者 powershell。 在 Linux 上，如果是图形用户界面，那么可以使用 termina">
+<meta property="og:type" content="article">
+<meta property="og:title" content="命令行">
+<meta property="og:url" content="http://yoursite.com/2014/08/27/命令行/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="命令行shellshell 就是一个程序，接收键盘输入的命令，传给操作系统去执行几乎所有的 Linux 都提供了一个名为 bash 的 shell 程序
+终端仿真器当使用图形用户界面时，我们需要另一个和 shell 交互的叫做终端仿真器的程序。 在 Windows 上，一般使用操作系统自带的 cmd 或者 powershell。 在 Linux 上，如果是图形用户界面，那么可以使用 termina">
+<meta property="og:updated_time" content="2016-10-27T14:43:06.924Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="命令行">
+<meta name="twitter:description" content="命令行shellshell 就是一个程序，接收键盘输入的命令，传给操作系统去执行几乎所有的 Linux 都提供了一个名为 bash 的 shell 程序
+终端仿真器当使用图形用户界面时，我们需要另一个和 shell 交互的叫做终端仿真器的程序。 在 Windows 上，一般使用操作系统自带的 cmd 或者 powershell。 在 Linux 上，如果是图形用户界面，那么可以使用 termina">
 
 
 
@@ -110,10 +117,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2014/08/27/命令行/"/>
 
 
-  <title> Hexo </title>
+  <title> 命令行 | Hexo </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="">
@@ -134,9 +141,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -215,9 +220,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -237,170 +242,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2015/12/06/AnjularJs/" itemprop="url">
-                  AnjularJs
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2015-12-06T12:32:57+08:00" content="2015-12-06">
-              2015-12-06
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="AngularJS学习笔记（一）"><a href="#AngularJS学习笔记（一）" class="headerlink" title="AngularJS学习笔记（一）"></a>AngularJS学习笔记（一）</h1><h2 id="Awesome"><a href="#Awesome" class="headerlink" title="Awesome"></a>Awesome</h2><p>首先给大家推荐一个网站 [<a href="https://www.awesomes.cn/]，这是个" target="_blank" rel="external">https://www.awesomes.cn/]，这是个</a> JavaScript 的技术栈，上面会定期会定期更新一些比较火的前端技术。</p>
-<h2 id="框架和库"><a href="#框架和库" class="headerlink" title="框架和库"></a>框架和库</h2><p>很多前端开发人员还不弄明白什么是库or框架，在此简单的总结一下</p>
-<ul>
-<li>框架：比如 Bootstrap<ul>
-<li>框架一般是封装了很多繁杂的操作，提供了某种规则、约定的使用方式</li>
-<li>开发人员只要遵守这些规则来配置即可实现响应功能，以框架为主导</li>
-</ul>
-</li>
-<li>库：比如 jQuery<ul>
-<li>库一般提供了一些函数、API</li>
-<li>由开发者使用库提供的 API 来开发业务，以开发者为主导</li>
-</ul>
-</li>
-</ul>
-<h2 id="什么是AngularJS"><a href="#什么是AngularJS" class="headerlink" title="什么是AngularJS"></a>什么是AngularJS</h2><ul>
-<li>一款优秀的前端高级 JS 框架</li>
-<li>可以轻松构建 SPA 应用程序</li>
-<li>通过指令扩展了 HTML ，通过表法式绑定数据到 HTML </li>
-<li>最大程度解放了 DOM 操作（ng 是第一个真正意义上把前端从刀耕火种带到工业时代的流行框架）</li>
-</ul>
-<h2 id="关于-AngularJS-的版本"><a href="#关于-AngularJS-的版本" class="headerlink" title="关于 AngularJS 的版本"></a>关于 AngularJS 的版本</h2><p>AngularJS 在1.2之后不再支持IE6/7，在1.3之后不再支持IE8，ng2 已经于2016年8月正式发布，但目前市面上用的还不多，一些老的项目还是在用 ng1。</p>
-<h2 id="关于-SPA-单页应用"><a href="#关于-SPA-单页应用" class="headerlink" title="关于 SPA 单页应用"></a>关于 SPA 单页应用</h2><p>全称 Single Page Applaction，即单页面网页，传统的网站为多页面模型，然后通过 url 的路径地址请求数据。</p>
-<p>SPA 单页面则是通过锚点来指定路径。</p>
-<p>SPA 的核心点</p>
-<ul>
-<li>锚点</li>
-<li>监听锚点的事件变化</li>
-<li>获取锚点内容</li>
-<li>根据不同的锚点内容做不同的内容改变</li>
-</ul>
-<h3 id="单页应用的好处"><a href="#单页应用的好处" class="headerlink" title="单页应用的好处"></a>单页应用的好处</h3><ul>
-<li>提高了整个应用程序的响应速度、增加了用户体验</li>
-<li>重用资源</li>
-<li>方便统一控制和代码重用</li>
-</ul>
-<h3 id="锚点的使用"><a href="#锚点的使用" class="headerlink" title="锚点的使用"></a>锚点的使用</h3><ul>
-<li>网页内部定位 <ul>
-<li>锚点  id 不是标准方式</li>
-<li>可以在要定位的元素上方放一个 name 属性，它的值为 a 连接的 href 地址</li>
-</ul>
-</li>
-<li>改变内容<ul>
-<li>内部定位的以#开头</li>
-<li>改变页面内容的最好区分一下，以#/开头</li>
-<li>hashchange 事件可以在锚点发生改变是触发</li>
-<li>但是这样做很麻烦，不如框架来得快</li>
-</ul>
-</li>
-</ul>
-<h2 id="使用-AngularJS-的场景"><a href="#使用-AngularJS-的场景" class="headerlink" title="使用 AngularJS  的场景"></a>使用 AngularJS  的场景</h2><ul>
-<li>重型的后台管理系统<ul>
-<li>有很多增删改查</li>
-<li>繁杂的 DOM 操作处理的页面</li>
-</ul>
-</li>
-<li>单页面应用程序</li>
-<li>类似于 canvas、html5 游戏、数据可视化应用，使用 ng 就没有意义了</li>
-</ul>
-<h2 id="需要掌握"><a href="#需要掌握" class="headerlink" title="需要掌握"></a>需要掌握</h2><ol>
-<li>能概述 AngularJS 是什么</li>
-<li>能概述什么是 SPA 应用程序以及掌握锚点在 SPA 应用程序中的使用</li>
-<li>能掌握 bower 包管理工具的基本使用</li>
-<li>能解释一个基本的 ng 应用程序执行流程（见hello-world代码解析）</li>
-<li>能掌握 AngularJS 中的基本的指令和表达式的使用</li>
-<li>能掌握 AngularJS 中基本的模块使用（创建模块，依赖模块，获取模块）</li>
-<li>能使用 AngularJS 完成模拟用户注册功能</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2014/08/27/命令行/" itemprop="url">
-                  命令行
-                </a>
+                命令行
               
             
           </h1>
@@ -440,9 +282,7 @@
       
 
       
-        
-          
-            <h1 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h1><h2 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h2><h3 id="shell-就是一个程序，接收键盘输入的命令，传给操作系统去执行"><a href="#shell-就是一个程序，接收键盘输入的命令，传给操作系统去执行" class="headerlink" title="shell 就是一个程序，接收键盘输入的命令，传给操作系统去执行"></a>shell 就是一个程序，接收键盘输入的命令，传给操作系统去执行</h3><p>几乎所有的 Linux 都提供了一个名为 bash 的 shell 程序</p>
+        <h1 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h1><h2 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h2><h3 id="shell-就是一个程序，接收键盘输入的命令，传给操作系统去执行"><a href="#shell-就是一个程序，接收键盘输入的命令，传给操作系统去执行" class="headerlink" title="shell 就是一个程序，接收键盘输入的命令，传给操作系统去执行"></a>shell 就是一个程序，接收键盘输入的命令，传给操作系统去执行</h3><p>几乎所有的 Linux 都提供了一个名为 bash 的 shell 程序</p>
 <h2 id="终端仿真器"><a href="#终端仿真器" class="headerlink" title="终端仿真器"></a>终端仿真器</h2><p>当使用图形用户界面时，我们需要另一个和 shell 交互的叫做终端仿真器的程序。 在 Windows 上，一般使用操作系统自带的 cmd 或者 powershell。 在 Linux 上，如果是图形用户界面，那么可以使用 terminal 或者 konsole、gnome-terminal 之类 的终端仿真器，但基本上，它们都完成同样的事情，让我们能访问 shell， 你可能会因为附加的一些花俏功能而喜欢上某个终端。</p>
 <p>关于名字，如果有人提到：控制台、终端、bash、shell、terminal 等，一般都是指上面这些。</p>
 <p>一般在 Linux 上，都会提供一个 bash 或者 terminal 之类的工具，让你来使用 shell</p>
@@ -582,16 +422,20 @@
 </li>
 </ul>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -599,162 +443,36 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2014/08/22/关于Markdown的使用/" rel="next" title="关于Markdown的使用">
+                <i class="fa fa-chevron-left"></i> 关于Markdown的使用
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2014/08/22/关于Markdown的使用/" itemprop="url">
-                  关于Markdown的使用
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2014-08-22T19:20:03+08:00" content="2014-08-22">
-              2014-08-22
-            </time>
-          </span>
-
-          
-
-          
+              <a href="/2015/12/06/AnjularJs/" rel="prev" title="AnjularJs">
+                AnjularJs <i class="fa fa-chevron-right"></i>
+              </a>
             
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="关于-Markdown-的使用"><a href="#关于-Markdown-的使用" class="headerlink" title="关于 Markdown 的使用"></a>关于 Markdown 的使用</h1><h2 id="Markdow-的优点"><a href="#Markdow-的优点" class="headerlink" title="Markdow 的优点"></a>Markdow 的优点</h2><ul>
-<li>纯文本，所以兼容性极强，可以用所有文本编辑器打开</li>
-<li>专注于文字写作而不是排版</li>
-<li>格式转换方便，可以轻松转换为 HTML、PPT、电子书等</li>
-<li>Markdown 标记语法简单好记，可读性强</li>
-</ul>
-<h2 id="实时预览编辑器"><a href="#实时预览编辑器" class="headerlink" title="实时预览编辑器"></a>实时预览编辑器</h2><ul>
-<li>dillinger</li>
-<li>马克飞象</li>
-<li>简书</li>
-<li>MarkdownPad</li>
-<li>Sublime Text</li>
-<li>配合 Markdown Preview 插件</li>
-<li>Webstorm</li>
-<li>配合插件</li>
-<li>gitbook</li>
-<li>visual studio code</li>
-</ul>
-<h2 id="Markdow-的基本语法"><a href="#Markdow-的基本语法" class="headerlink" title="Markdow 的基本语法"></a>Markdow 的基本语法</h2><ul>
-<li>标题</li>
-<li>段落</li>
-<li>粗体<ul>
-<li><strong>加粗</strong></li>
-</ul>
-</li>
-<li>斜体</li>
-<li>无序列表</li>
-<li>有序列表</li>
-<li>链接<ul>
-<li>[标题]（网址）</li>
-</ul>
-</li>
-<li>图片<ul>
-<li>！[标题]（路径）</li>
-</ul>
-</li>
-<li>文本引用<ul>
-<li>&gt;</li>
-</ul>
-</li>
-<li>行内代码引用</li>
-<li>多行代码引用<ul>
-<li>用```包括</li>
-</ul>
-</li>
-<li>表格</li>
-</ul>
-<h2 id="使用-Markdow-来写一封漂亮的电子邮件"><a href="#使用-Markdow-来写一封漂亮的电子邮件" class="headerlink" title="使用 Markdow 来写一封漂亮的电子邮件"></a>使用 Markdow 来写一封漂亮的电子邮件</h2><p>其实就是将 md 格式字符串转换为 HTML<br>这里使用一个 Chrome 插件</p>
-<p>[Markdow Here]</p>
-<h2 id="使用-GitBook-制作电子书"><a href="#使用-GitBook-制作电子书" class="headerlink" title="使用 GitBook 制作电子书"></a>使用 GitBook 制作电子书</h2><p>[GitBook]</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -762,6 +480,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -781,8 +503,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -818,6 +549,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#命令行"><span class="nav-number">1.</span> <span class="nav-text">命令行</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#shell"><span class="nav-number">1.1.</span> <span class="nav-text">shell</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#shell-就是一个程序，接收键盘输入的命令，传给操作系统去执行"><span class="nav-number">1.1.1.</span> <span class="nav-text">shell 就是一个程序，接收键盘输入的命令，传给操作系统去执行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#终端仿真器"><span class="nav-number">1.2.</span> <span class="nav-text">终端仿真器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Git-for-Windows-客户端体验-shell"><span class="nav-number">1.3.</span> <span class="nav-text">安装 Git for Windows 客户端体验 shell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开和退出终端"><span class="nav-number">1.4.</span> <span class="nav-text">打开和退出终端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令提示符"><span class="nav-number">1.5.</span> <span class="nav-text">命令提示符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用终端操作文件系统"><span class="nav-number">1.6.</span> <span class="nav-text">使用终端操作文件系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-less-命令浏览文件内容"><span class="nav-number">1.7.</span> <span class="nav-text">使用 less 命令浏览文件内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本编辑器-vi"><span class="nav-number">1.8.</span> <span class="nav-text">文本编辑器 vi</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vi-操作"><span class="nav-number">1.9.</span> <span class="nav-text">vi 操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#保存工作"><span class="nav-number">1.10.</span> <span class="nav-text">保存工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本编辑"><span class="nav-number">1.11.</span> <span class="nav-text">基本编辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#插入"><span class="nav-number">1.11.1.</span> <span class="nav-text">插入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#撤销"><span class="nav-number">1.11.2.</span> <span class="nav-text">撤销</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除"><span class="nav-number">1.11.3.</span> <span class="nav-text">删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制"><span class="nav-number">1.11.4.</span> <span class="nav-text">复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#粘贴"><span class="nav-number">1.11.5.</span> <span class="nav-text">粘贴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查找替换"><span class="nav-number">1.11.6.</span> <span class="nav-text">查找替换</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -914,6 +656,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 
