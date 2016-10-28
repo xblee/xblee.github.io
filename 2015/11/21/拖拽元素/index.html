@@ -84,12 +84,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2014/08/index.html">
+<meta name="description" content="拖拽元素提示：拖拽一般在移动端用不到，在PC端常用，一般使用的是JQ的插件，之前用JS写过拖拽定义当前元素是否可以拖拽，我必须在当前元素上面添加一个属性           draggable=true拖拽的过程当中要做一些事情，不断的触发事件，执行方法，提供了很多的事件1:ondragstart  拖拽开始2:ondragend   拖拽结束3:ondrag    拖拽过程当中一直调用4:ond">
+<meta property="og:type" content="article">
+<meta property="og:title" content="拖拽元素">
+<meta property="og:url" content="http://yoursite.com/2015/11/21/拖拽元素/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="拖拽元素提示：拖拽一般在移动端用不到，在PC端常用，一般使用的是JQ的插件，之前用JS写过拖拽定义当前元素是否可以拖拽，我必须在当前元素上面添加一个属性           draggable=true拖拽的过程当中要做一些事情，不断的触发事件，执行方法，提供了很多的事件1:ondragstart  拖拽开始2:ondragend   拖拽结束3:ondrag    拖拽过程当中一直调用4:ond">
+<meta property="og:updated_time" content="2016-10-28T12:47:40.464Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="拖拽元素">
+<meta name="twitter:description" content="拖拽元素提示：拖拽一般在移动端用不到，在PC端常用，一般使用的是JQ的插件，之前用JS写过拖拽定义当前元素是否可以拖拽，我必须在当前元素上面添加一个属性           draggable=true拖拽的过程当中要做一些事情，不断的触发事件，执行方法，提供了很多的事件1:ondragstart  拖拽开始2:ondragend   拖拽结束3:ondrag    拖拽过程当中一直调用4:ond">
 
 
 
@@ -110,10 +114,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2014/08/"/>
+  <link rel="canonical" href="http://yoursite.com/2015/11/21/拖拽元素/"/>
 
 
-  <title> Archive | Hexo </title>
+  <title> 拖拽元素 | Hexo </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="">
@@ -134,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -214,103 +218,121 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      Um..! 18 posts in total. Keep on posting.
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2014">2014</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2014/08/27/命令行/" itemprop="url">
-              
-                <span itemprop="name">命令行</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2014-08-27T22:42:30+08:00"
-              content="2014-08-27" >
-          08-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2014/08/22/关于Markdown的使用/" itemprop="url">
-              
-                <span itemprop="name">关于Markdown的使用</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2014-08-22T19:20:03+08:00"
-              content="2014-08-22" >
-          08-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
+  
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                拖拽元素
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-11-21T16:08:15+08:00" content="2015-11-21">
+              2015-11-21
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="拖拽元素"><a href="#拖拽元素" class="headerlink" title="拖拽元素"></a>拖拽元素</h1><p>提示：拖拽一般在移动端用不到，在PC端常用，一般使用的是JQ的插件，之前用JS写过拖拽<br>定义当前元素是否可以拖拽，我必须在当前元素上面添加一个属性<br>           draggable=true<br>拖拽的过程当中要做一些事情，不断的触发事件，执行方法，提供了很多的事件<br>1:ondragstart  拖拽开始<br>2:ondragend   拖拽结束<br>3:ondrag    拖拽过程当中一直调用<br>4:ondragleave   离开拖拽元素</p>
+<h1 id="目标元素"><a href="#目标元素" class="headerlink" title="目标元素"></a>目标元素</h1><p>ondrageenter  进入目标元素<br>ondragover  在目标元素悬停<br>ondragleave 离开目标元素</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/11/20/监听网络状态/" rel="next" title="监听网络状态">
+                <i class="fa fa-chevron-left"></i> 监听网络状态
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/06/AnjularJs/" rel="prev" title="AnjularJs">
+                AnjularJs <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -318,6 +340,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -337,8 +363,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -374,6 +409,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#拖拽元素"><span class="nav-number">1.</span> <span class="nav-text">拖拽元素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目标元素"><span class="nav-number">2.</span> <span class="nav-text">目标元素</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -470,11 +516,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
 
 
   

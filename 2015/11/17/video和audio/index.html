@@ -1,0 +1,568 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="video 和 audio在网页里面实现播放，网页播放也尽力过很多的周期
+
+使用 js 调用 windows 自带的播放器  windows media player 但是样式特别丑，定制样式 就特别麻烦
+flash （adobe photoshop ）这个是嵌套在浏览器 里面的一个插件，我们也可以使用js 进行调用这个插件可以调用硬件，所以我们也可以完成视频播放。早期的游戏，一些比较绚丽的网站都">
+<meta property="og:type" content="article">
+<meta property="og:title" content="video和audio">
+<meta property="og:url" content="http://yoursite.com/2015/11/17/video和audio/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="video 和 audio在网页里面实现播放，网页播放也尽力过很多的周期
+
+使用 js 调用 windows 自带的播放器  windows media player 但是样式特别丑，定制样式 就特别麻烦
+flash （adobe photoshop ）这个是嵌套在浏览器 里面的一个插件，我们也可以使用js 进行调用这个插件可以调用硬件，所以我们也可以完成视频播放。早期的游戏，一些比较绚丽的网站都">
+<meta property="og:updated_time" content="2016-10-28T12:44:28.518Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="video和audio">
+<meta name="twitter:description" content="video 和 audio在网页里面实现播放，网页播放也尽力过很多的周期
+
+使用 js 调用 windows 自带的播放器  windows media player 但是样式特别丑，定制样式 就特别麻烦
+flash （adobe photoshop ）这个是嵌套在浏览器 里面的一个插件，我们也可以使用js 进行调用这个插件可以调用硬件，所以我们也可以完成视频播放。早期的游戏，一些比较绚丽的网站都">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/11/17/video和audio/"/>
+
+
+  <title> video和audio | Hexo </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Hexo</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule" rel="section">
+            
+            Schedule
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                video和audio
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-11-17T22:43:46+08:00" content="2015-11-17">
+              2015-11-17
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="video-和-audio"><a href="#video-和-audio" class="headerlink" title="video 和 audio"></a>video 和 audio</h1><p>在网页里面实现播放，网页播放也尽力过很多的周期</p>
+<ul>
+<li>使用 js 调用 windows 自带的播放器  windows media player 但是样式特别丑，定制样式 就特别麻烦</li>
+<li>flash （adobe photoshop ）这个是嵌套在浏览器 里面的一个插件，我们也可以使用js 进行调用<br>这个插件可以调用硬件，所以我们也可以完成视频播放。<br>早期的游戏，一些比较绚丽的网站都是使用 flash<br>你电脑上面必须得安装一个flash，出现了一批程序 flash</li>
+<li>大部分的用户电脑上面装了快播，js 把快播调出来</li>
+<li>大部分网站解决方案， html5 内置的标签，给我们提供了两个标签，一个是video（适配），一个是audio（音频）</li>
+</ul>
+<h2 id="audio"><a href="#audio" class="headerlink" title="audio"></a>audio</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;!--</div><div class="line">    指定播放源</div><div class="line">    我们可以指定另外一个属性</div><div class="line">    controls 控制</div><div class="line">    这样做播放器就比较简单.</div><div class="line">    这个有兼容性，对于这个.mp3 格式有兼容性.</div><div class="line">     src=&quot;music/See You Again.mp3&quot;</div><div class="line">    一般如果我们做游戏的话，就不用关心这个音频的格式问题。</div><div class="line">    这些音乐肯定都是后台定义好了的，.mp3 格式.</div><div class="line">    有些网站是需要 考虑兼容问题，虾米，天天动听，酷我，</div><div class="line">    它里面的一些音频文件是用户上传上去的。</div><div class="line">    这个时候就需要处理兼容，这个我们基本上也不在浏览器端处理</div><div class="line">    我们用户上传音乐，服务器接受到客户端上传到 音乐数据，服务器端会把用户传递的这些数据</div><div class="line">    转码成mp3 格式的数据源。</div><div class="line">--&gt;</div><div class="line">    &lt;audio controls&gt;</div><div class="line">        &lt;source src=&quot;music/See You Again.mp3&quot;&gt;</div><div class="line">    &lt;/audio&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div><div class="line"></div><div class="line">### video</div><div class="line"></div><div class="line">controls属性会给视频播放一个默认的样式</div><div class="line">&lt;video controls&gt;</div><div class="line">                &lt;!--mp4,avi,rmvb--&gt;</div><div class="line">                &lt;source src=&quot;video/movie.mp4&quot;&gt;</div><div class="line">&lt;/video&gt;</div><div class="line"></div><div class="line">### video的样式定制</div><div class="line"></div><div class="line">全屏显示</div><div class="line">    给全屏按钮绑定点击事件，执行全屏JS</div><div class="line">    由于兼容问题，需要进行if判断</div><div class="line">if(image.webkitRequestFullScreen)&#123;  </div><div class="line">//兼容谷歌</div><div class="line">     image.webkitRequestFullScreen();</div><div class="line">&#125;else if(image.mozRequestFullScreen)&#123;</div><div class="line">//兼容火狐</div><div class="line">     image.mozRequestFullScreen();</div><div class="line">&#125;else if(image.msRequestFullScreen) &#123;</div><div class="line">//兼容IE</div><div class="line">     image.msRequestFullScreen();</div><div class="line">&#125;</div><div class="line">开关按钮</div><div class="line">video.paused属性，判断视频是播放还是暂停</div><div class="line">播放返回false，暂停返回true</div><div class="line"></div><div class="line">video.pause(    )方法，暂停视频</div><div class="line">video.paly(    )方法，开始视频</div><div class="line"></div><div class="line">方式一</div><div class="line">    /*</div><div class="line">     * 1:这个视频可以播放.</div><div class="line">     *</div><div class="line">     *   点击可以播放，再次点击就变成暂停，再次点击有可以播放</div><div class="line">     * */</div><div class="line">    var video = document.querySelector(&quot;video&quot;);</div><div class="line">    document.querySelector(&quot;.play-button&quot;).onclick = function () &#123;</div><div class="line">        //api 调用它的那个方法可以完成播放</div><div class="line">        /*video.play();*/</div><div class="line">        /*</div><div class="line">         *   video 有一个属性，判断视频的播放状态，</div><div class="line">         *</div><div class="line">         *   paused 如果视频的暂停的状态就返回true ，否则返回false</div><div class="line">         * */</div><div class="line">        if (video.paused) &#123;</div><div class="line">            video.play();</div><div class="line">            this.classList.remove(&quot;fa-play&quot;);</div><div class="line">            this.classList.add(&quot;fa-pause&quot;);</div><div class="line">        &#125; else &#123;</div><div class="line">            video.pause();</div><div class="line">            this.classList.remove(&quot;fa-pause&quot;);</div><div class="line">            this.classList.add(&quot;fa-play&quot;);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">方式二</div><div class="line">// 2.给按钮注册点击事件</div><div class="line">playBtn.onclick = function() &#123;</div><div class="line">    // 3. 判断视频是处于播放状态还是暂停状态</div><div class="line">    if (flag == true) &#123;</div><div class="line">        // 4.调用video的方法play()和pause()控制视频的播放与暂停</div><div class="line">        video.play();</div><div class="line">        playBtn.classList.toggle(&quot;fa-pause&quot;);</div><div class="line">        flag = false;</div><div class="line">    &#125; else &#123;</div><div class="line">        //             4.调用video的方法play()和pause()控制视频的播放与暂停</div><div class="line">        video.pause();</div><div class="line">            playBtn.classList.toggle(&quot;fa-pause&quot;);</div><div class="line">        flag = true;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">播放时间</div><div class="line">video.oncanpaly事件，当视频可以播放时触发这个事件</div><div class="line">video.oncanplay = function()&#123;</div><div class="line">    var duration = video.duration//获取视频总时间，结果以秒为单位，再转换成00:20：55格式</div><div class="line">&#125;</div><div class="line">video.ontimeupdate事件，当视频时间更新时触发这个事件</div><div class="line">video.ontimeupdate = function()&#123;</div><div class="line">    var currentTime = video.currentTime;//获取当前播放的时间</div><div class="line">&#125;</div><div class="line">进度条采用百分比改变宽度</div><div class="line"> /*</div><div class="line">     *   第二个功能，计算出视频的总时间，我的这个事件需要动态切换.</div><div class="line">     *   video  oncanplay 当视频可以播放的时候就会触发这个事件</div><div class="line">     *   我就可以去获取到video 的时间，duration （持续时间），可以用来获取视频的总时长</div><div class="line">     * */</div><div class="line">    video.oncanplay = function () &#123;</div><div class="line">        // alert(video.duration); 获取的时间是以秒为单位  164 秒</div><div class="line">        //我需要把这个秒转换成 00:02:44</div><div class="line">        //我可以写一个方法去做这件事情，</div><div class="line">        var duration = video.duration;</div><div class="line">        var html = formatTime(duration);</div><div class="line">        document.querySelector(&quot;.total-time&quot;).innerHTML = html;</div><div class="line">    &#125;</div><div class="line">    /*</div><div class="line">     * 7800s</div><div class="line">     *</div><div class="line">     * */</div><div class="line">    function formatTime(alltimer) &#123;</div><div class="line">        /*计算时间*/</div><div class="line">        var h, m, s;</div><div class="line">        h = Math.floor(alltimer / 3600);</div><div class="line">        m = Math.floor((alltimer % 3600) / 60);</div><div class="line">        s = Math.floor(alltimer % 60);</div><div class="line">        h = h &lt;= 9 ? &quot;0&quot; + h : h;</div><div class="line">        m = m &lt;= 9 ? &quot;0&quot; + m : m;</div><div class="line">        s = s &lt;= 9 ? &quot;0&quot; + s : s;</div><div class="line">        var html = h + &quot;:&quot; + m + &quot;:&quot; + s;</div><div class="line">        return html;</div><div class="line">    &#125;</div><div class="line">    /*</div><div class="line">     * 时间动态去计算.</div><div class="line">     * 又有一个新的时间，这个事件叫做  ontimeupdate 当时间更新的时候就会触发这个事件</div><div class="line">     * */</div><div class="line">    video.ontimeupdate = function () &#123;</div><div class="line">        //不断的是获取视频的 时间</div><div class="line">        /*  var duration=video.duration;*/</div><div class="line">        //还有一个属性，获取到视频的当前播放时间.</div><div class="line">        var currentTime = video.currentTime;</div><div class="line">        console.log(currentTime);</div><div class="line">        //不断的想页面输出.</div><div class="line">        var html = formatTime(currentTime);</div><div class="line">        document.querySelector(&quot;.current-time&quot;).innerHTML = html;</div><div class="line">        /*进度条发生改变.</div><div class="line">         * 播放到了百分之后多少.然后把progress-bar 它的width 设置成百分之多少</div><div class="line">         * */</div><div class="line">        var width = (currentTime / video.duration) * 100;</div><div class="line">        document.querySelector(&quot;.progress-bar&quot;).style.width = width + &quot;%&quot;;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/11/16/HTML5概述/" rel="next" title="HTML5概述">
+                <i class="fa fa-chevron-left"></i> HTML5概述
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/11/18/DOM/" rel="prev" title="DOM">
+                DOM <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="John Doe" />
+          <p class="site-author-name" itemprop="name">John Doe</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#video-和-audio"><span class="nav-number">1.</span> <span class="nav-text">video 和 audio</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#audio"><span class="nav-number">1.1.</span> <span class="nav-text">audio</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
