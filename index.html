@@ -503,6 +503,115 @@
             
               
                 
+                <a class="post-title-link" href="/2015/01/13/localStorage本地存储/" itemprop="url">
+                  localStorage本地存储
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2015-01-13T19:25:14+08:00" content="2015-01-13">
+              2015-01-13
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h1><p>本地存储</p>
+<p>当作一个仓库</p>
+<p>有三个重要方法</p>
+<h2 id="setItem"><a href="#setItem" class="headerlink" title="setItem"></a>setItem</h2><p>window.localStorage.setItem(“user”,JSON.stringify([{“username”:”admin”,”password”:”123456”},{“username”:”admin”,”password”:”123456”},{“username”:”admin”,”password”:”123456”}]))</p>
+<p>存储进去后，将对象转为了字符串</p>
+<p>所以这里要进行 json 序列化：通过 JSON.stringify 方法，将 json 对象转换成 json 字符串 </p>
+<p>（另外还有 json 反序列化：将 json 字符串转换为 json 对象）</p>
+<h2 id="getItem"><a href="#getItem" class="headerlink" title="getItem"></a>getItem</h2><p>window.localStorage.getItem(“user”)</p>
+<p>得到了”[{“username”:”admin”,”password”:”123456”},{“username”:”admin”,”password”:”123456”},{“username”:”admin”,”password”:”123456”}]”</p>
+<p>可以通过 json.parse 解析一下</p>
+<p>JSON.parse(window.localStorage.setItem(“user”))</p>
+<p>得到 [object,ovject,object]</p>
+<p>而第一次用户没有输入用户名、密码的时候</p>
+<p>JSON.parse(window.localStorage.setItem(“user”))的结果为 null</p>
+<p>所以要给这个数组一个初始值</p>
+<p>JSON.parse(window.localStorage.setItem(“user”)||”[]”)</p>
+<h2 id="removeItem"><a href="#removeItem" class="headerlink" title="removeItem"></a>removeItem</h2>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2014/12/08/JSON-parse和eval的区别/" itemprop="url">
                   JSON.parse和eval的区别
                 </a>
@@ -1694,7 +1803,7 @@ url = url + &apos;?&apos; + queryString + &apos;callback &apos; + callbackName&a
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
