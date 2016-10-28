@@ -398,6 +398,141 @@
             
               
                 
+                <a class="post-title-link" href="/2014/11/11/JSONP解决跨域/" itemprop="url">
+                  JSONP解决跨域
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2014-11-11T22:15:40+08:00" content="2014-11-11">
+              2014-11-11
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="什么是跨域"><a href="#什么是跨域" class="headerlink" title="什么是跨域"></a>什么是跨域</h3><p>同源策略，它是由Netscape提出的一个著名的安全策略。</p>
+<p>现在所有支持JavaScript 的浏览器都会使用这个策略。</p>
+<p>所谓同源是指，域名，协议，端口相同。</p>
+<p>当一个浏览器的两个tab页中分别打开来 百度和谷歌的页面</p>
+<p>当浏览器的百度tab页执行一个脚本的时候会检查这个脚本是属于哪个页面的，</p>
+<p>即检查是否同源，只有和百度同源的脚本才会被执行。</p>
+<p>XMLHttpRequest 有跨域请求限制</p>
+<p>在地址栏中直接输入则不会有跨域</p>
+<ul>
+<li>协议名 protocol</li>
+<li>主机名 host</li>
+<li>端口号 protocol</li>
+</ul>
+<p>这三个有任意一个不同，网站建的数据请求与传输便构成了跨域</p>
+<p>不同域名、主机名会有跨域限制<br>127.0.0.1<br>192.168.123.123</p>
+<p>同域名不同端口号hiU有跨域限制<br>127.0.0.1：3000<br>127.0.0.1：5000</p>
+<p>不同协议会有跨域<br>file：//c:abc<br><a href="http://www.abc.com" target="_blank" rel="external">http://www.abc.com</a><br><a href="https://www.abc.com" target="_blank" rel="external">https://www.abc.com</a></p>
+<h3 id="跨域的解决方案"><a href="#跨域的解决方案" class="headerlink" title="跨域的解决方案"></a>跨域的解决方案</h3><ul>
+<li>jsonp</li>
+</ul>
+<p>img 标签没有跨域限制，但是得不到响应内容<br>link 标签没有跨域限制，能拿到响应内容<br>a 标签有跨域限制<br>所有能指定 src href 的标签都没有跨域限制<br>script 标签没有跨域限制</p>
+<p>当给 script 标签指定了 src 属性后，浏览器会对该地址发送请求<br>当请求响应成功之后，也就是拿到响应内容之后<br>浏览器会把得到的响应内容当作 JacaScript 语法去解析<br>所以把相应内容写成 JS 语法<br>这时候，服务器的响应换成了 js 语言<br>若响应内容为 json 格式 {“a”:”b”}<br>则拿不到，若内容为 var obj={“a”:”b”}<br>则能拿到数据</p>
+<ol>
+<li>创建一个 script 标签</li>
+<li>给 script 标签指定 src 属性</li>
+<li>将 script 标签放到 body 中</li>
+</ol>
+<p>var scriptElement = document.createElement(‘script’)<br>scriptElement.src=’<a href="http://127.0.0.1" target="_blank" rel="external">http://127.0.0.1</a>‘<br>// 当把 script 标签放到 DOM 中之后，并不是马上发起请求的<br>// 而且 script 指定的请求什么时候成功无法确定<br>// 也就是说响应回来的代码什么时候执行无法确定<br>document.body.appendChild(scriptElement)<br>// 当该标签请求成功并解析执行完 JS 代码之后，触发自己的 load 事件<br>// 然后执行该回调函数<br>// 思考：我们能不能在发送请求的时候，就告诉对方，给我定义一个什么变量名<br>// 让对方查询字符串，定义该变量名的对象<br>// 那么我们在使用的时候就能直接拿这个变量名来使用<br>scriptElement.addEventListener(‘load’,function(){console.log})<br>// 这样通过在后台获取到请求的变量名，将数据对象命名为该变量名<br>// 通过这种方法，我们前端就可以定义数据的变量名</p>
+<p>// 但是该方法不太好，升级一下<br>scriptElement.src=’<a href="http://127.0.0.1:3000?callback=getData" target="_blank" rel="external">http://127.0.0.1:3000?callback=getData</a>‘<br>后台响应 queryObj.callback +’（’+数据内容+’）’<br>function getData(data){<br>    得到数据内容 data<br>}</p>
+<p>现在封装一下这个方法，因为前后台交互常采用 json 格式<br>所以叫 jsonp ， p 是 pack 包装的意思</p>
+<p>function jsonp(url,{params},fn){<br>//第一步，解析处理 url<br>    var queryString = ‘’<br>    for(var key in params){<br>        queryString+=key + ‘ = ‘ + params[key] + ‘&amp;’<br>        //结尾多一个&amp; 不熟影响<br>    }</p>
+<pre><code>// 第二步，创建 script 标签，设置 src ，添加到 body
+var scriptElement = document.createElement(&apos;script&apos;)
+scriptElement.src=url
+document.body.appendChild(scriptElement)
+// 将用户传递进来的函数 fn 变为全局函数 fn
+window[abc] = fn
+//此时还有问题,每次暴露出去的函数名都是全局变量，多次调用jsonp会覆盖掉函数
+var callbackName = &apos;abc&apos; + (Math.random()).toString() 
+window[callbackName] = fn
+url = url + &apos;?&apos; + queryString + &apos;callback &apos; + callbackName&apos;
+</code></pre><p>}</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2014/10/07/使用github和hexo搭建博客/" itemprop="url">
                   使用github和hexo搭建博客
                 </a>
@@ -1356,7 +1491,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>

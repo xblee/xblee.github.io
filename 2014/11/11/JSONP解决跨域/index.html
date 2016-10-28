@@ -84,31 +84,37 @@
 
 
 
-<meta name="description" content="AngularJS学习笔记（一）Awesome首先给大家推荐一个网站 [https://www.awesomes.cn/]，这是个 JavaScript 的技术栈，上面会定期会定期更新一些比较火的前端技术。
-框架和库很多前端开发人员还不弄明白什么是库or框架，在此简单的总结一下
-
-框架：比如 Bootstrap
-框架一般是封装了很多繁杂的操作，提供了某种规则、约定的使用方式
-开发人员只要遵守这些规">
+<meta name="description" content="什么是跨域同源策略，它是由Netscape提出的一个著名的安全策略。
+现在所有支持JavaScript 的浏览器都会使用这个策略。
+所谓同源是指，域名，协议，端口相同。
+当一个浏览器的两个tab页中分别打开来 百度和谷歌的页面
+当浏览器的百度tab页执行一个脚本的时候会检查这个脚本是属于哪个页面的，
+即检查是否同源，只有和百度同源的脚本才会被执行。
+XMLHttpRequest 有跨域请求限制
+在">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AnjularJs">
-<meta property="og:url" content="http://yoursite.com/2015/12/06/AnjularJs/index.html">
+<meta property="og:title" content="JSONP解决跨域">
+<meta property="og:url" content="http://yoursite.com/2014/11/11/JSONP解决跨域/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="AngularJS学习笔记（一）Awesome首先给大家推荐一个网站 [https://www.awesomes.cn/]，这是个 JavaScript 的技术栈，上面会定期会定期更新一些比较火的前端技术。
-框架和库很多前端开发人员还不弄明白什么是库or框架，在此简单的总结一下
-
-框架：比如 Bootstrap
-框架一般是封装了很多繁杂的操作，提供了某种规则、约定的使用方式
-开发人员只要遵守这些规">
-<meta property="og:updated_time" content="2016-10-21T11:33:46.899Z">
+<meta property="og:description" content="什么是跨域同源策略，它是由Netscape提出的一个著名的安全策略。
+现在所有支持JavaScript 的浏览器都会使用这个策略。
+所谓同源是指，域名，协议，端口相同。
+当一个浏览器的两个tab页中分别打开来 百度和谷歌的页面
+当浏览器的百度tab页执行一个脚本的时候会检查这个脚本是属于哪个页面的，
+即检查是否同源，只有和百度同源的脚本才会被执行。
+XMLHttpRequest 有跨域请求限制
+在">
+<meta property="og:updated_time" content="2016-10-28T05:16:13.394Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AnjularJs">
-<meta name="twitter:description" content="AngularJS学习笔记（一）Awesome首先给大家推荐一个网站 [https://www.awesomes.cn/]，这是个 JavaScript 的技术栈，上面会定期会定期更新一些比较火的前端技术。
-框架和库很多前端开发人员还不弄明白什么是库or框架，在此简单的总结一下
-
-框架：比如 Bootstrap
-框架一般是封装了很多繁杂的操作，提供了某种规则、约定的使用方式
-开发人员只要遵守这些规">
+<meta name="twitter:title" content="JSONP解决跨域">
+<meta name="twitter:description" content="什么是跨域同源策略，它是由Netscape提出的一个著名的安全策略。
+现在所有支持JavaScript 的浏览器都会使用这个策略。
+所谓同源是指，域名，协议，端口相同。
+当一个浏览器的两个tab页中分别打开来 百度和谷歌的页面
+当浏览器的百度tab页执行一个脚本的时候会检查这个脚本是属于哪个页面的，
+即检查是否同源，只有和百度同源的脚本才会被执行。
+XMLHttpRequest 有跨域请求限制
+在">
 
 
 
@@ -129,10 +135,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2015/12/06/AnjularJs/"/>
+  <link rel="canonical" href="http://yoursite.com/2014/11/11/JSONP解决跨域/"/>
 
 
-  <title> AnjularJs | Hexo </title>
+  <title> JSONP解决跨域 | Hexo </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="">
@@ -254,7 +260,7 @@
             
             
               
-                AnjularJs
+                JSONP解决跨域
               
             
           </h1>
@@ -266,8 +272,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2015-12-06T12:32:57+08:00" content="2015-12-06">
-              2015-12-06
+            <time itemprop="dateCreated" datetime="2014-11-11T22:15:40+08:00" content="2014-11-11">
+              2014-11-11
             </time>
           </span>
 
@@ -294,73 +300,48 @@
       
 
       
-        <h1 id="AngularJS学习笔记（一）"><a href="#AngularJS学习笔记（一）" class="headerlink" title="AngularJS学习笔记（一）"></a>AngularJS学习笔记（一）</h1><h2 id="Awesome"><a href="#Awesome" class="headerlink" title="Awesome"></a>Awesome</h2><p>首先给大家推荐一个网站 [<a href="https://www.awesomes.cn/]，这是个" target="_blank" rel="external">https://www.awesomes.cn/]，这是个</a> JavaScript 的技术栈，上面会定期会定期更新一些比较火的前端技术。</p>
-<h2 id="框架和库"><a href="#框架和库" class="headerlink" title="框架和库"></a>框架和库</h2><p>很多前端开发人员还不弄明白什么是库or框架，在此简单的总结一下</p>
+        <h3 id="什么是跨域"><a href="#什么是跨域" class="headerlink" title="什么是跨域"></a>什么是跨域</h3><p>同源策略，它是由Netscape提出的一个著名的安全策略。</p>
+<p>现在所有支持JavaScript 的浏览器都会使用这个策略。</p>
+<p>所谓同源是指，域名，协议，端口相同。</p>
+<p>当一个浏览器的两个tab页中分别打开来 百度和谷歌的页面</p>
+<p>当浏览器的百度tab页执行一个脚本的时候会检查这个脚本是属于哪个页面的，</p>
+<p>即检查是否同源，只有和百度同源的脚本才会被执行。</p>
+<p>XMLHttpRequest 有跨域请求限制</p>
+<p>在地址栏中直接输入则不会有跨域</p>
 <ul>
-<li>框架：比如 Bootstrap<ul>
-<li>框架一般是封装了很多繁杂的操作，提供了某种规则、约定的使用方式</li>
-<li>开发人员只要遵守这些规则来配置即可实现响应功能，以框架为主导</li>
+<li>协议名 protocol</li>
+<li>主机名 host</li>
+<li>端口号 protocol</li>
 </ul>
-</li>
-<li>库：比如 jQuery<ul>
-<li>库一般提供了一些函数、API</li>
-<li>由开发者使用库提供的 API 来开发业务，以开发者为主导</li>
+<p>这三个有任意一个不同，网站建的数据请求与传输便构成了跨域</p>
+<p>不同域名、主机名会有跨域限制<br>127.0.0.1<br>192.168.123.123</p>
+<p>同域名不同端口号hiU有跨域限制<br>127.0.0.1：3000<br>127.0.0.1：5000</p>
+<p>不同协议会有跨域<br>file：//c:abc<br><a href="http://www.abc.com" target="_blank" rel="external">http://www.abc.com</a><br><a href="https://www.abc.com" target="_blank" rel="external">https://www.abc.com</a></p>
+<h3 id="跨域的解决方案"><a href="#跨域的解决方案" class="headerlink" title="跨域的解决方案"></a>跨域的解决方案</h3><ul>
+<li>jsonp</li>
 </ul>
-</li>
-</ul>
-<h2 id="什么是AngularJS"><a href="#什么是AngularJS" class="headerlink" title="什么是AngularJS"></a>什么是AngularJS</h2><ul>
-<li>一款优秀的前端高级 JS 框架</li>
-<li>可以轻松构建 SPA 应用程序</li>
-<li>通过指令扩展了 HTML ，通过表法式绑定数据到 HTML </li>
-<li>最大程度解放了 DOM 操作（ng 是第一个真正意义上把前端从刀耕火种带到工业时代的流行框架）</li>
-</ul>
-<h2 id="关于-AngularJS-的版本"><a href="#关于-AngularJS-的版本" class="headerlink" title="关于 AngularJS 的版本"></a>关于 AngularJS 的版本</h2><p>AngularJS 在1.2之后不再支持IE6/7，在1.3之后不再支持IE8，ng2 已经于2016年8月正式发布，但目前市面上用的还不多，一些老的项目还是在用 ng1。</p>
-<h2 id="关于-SPA-单页应用"><a href="#关于-SPA-单页应用" class="headerlink" title="关于 SPA 单页应用"></a>关于 SPA 单页应用</h2><p>全称 Single Page Applaction，即单页面网页，传统的网站为多页面模型，然后通过 url 的路径地址请求数据。</p>
-<p>SPA 单页面则是通过锚点来指定路径。</p>
-<p>SPA 的核心点</p>
-<ul>
-<li>锚点</li>
-<li>监听锚点的事件变化</li>
-<li>获取锚点内容</li>
-<li>根据不同的锚点内容做不同的内容改变</li>
-</ul>
-<h3 id="单页应用的好处"><a href="#单页应用的好处" class="headerlink" title="单页应用的好处"></a>单页应用的好处</h3><ul>
-<li>提高了整个应用程序的响应速度、增加了用户体验</li>
-<li>重用资源</li>
-<li>方便统一控制和代码重用</li>
-</ul>
-<h3 id="锚点的使用"><a href="#锚点的使用" class="headerlink" title="锚点的使用"></a>锚点的使用</h3><ul>
-<li>网页内部定位 <ul>
-<li>锚点  id 不是标准方式</li>
-<li>可以在要定位的元素上方放一个 name 属性，它的值为 a 连接的 href 地址</li>
-</ul>
-</li>
-<li>改变内容<ul>
-<li>内部定位的以#开头</li>
-<li>改变页面内容的最好区分一下，以#/开头</li>
-<li>hashchange 事件可以在锚点发生改变是触发</li>
-<li>但是这样做很麻烦，不如框架来得快</li>
-</ul>
-</li>
-</ul>
-<h2 id="使用-AngularJS-的场景"><a href="#使用-AngularJS-的场景" class="headerlink" title="使用 AngularJS  的场景"></a>使用 AngularJS  的场景</h2><ul>
-<li>重型的后台管理系统<ul>
-<li>有很多增删改查</li>
-<li>繁杂的 DOM 操作处理的页面</li>
-</ul>
-</li>
-<li>单页面应用程序</li>
-<li>类似于 canvas、html5 游戏、数据可视化应用，使用 ng 就没有意义了</li>
-</ul>
-<h2 id="需要掌握"><a href="#需要掌握" class="headerlink" title="需要掌握"></a>需要掌握</h2><ol>
-<li>能概述 AngularJS 是什么</li>
-<li>能概述什么是 SPA 应用程序以及掌握锚点在 SPA 应用程序中的使用</li>
-<li>能掌握 bower 包管理工具的基本使用</li>
-<li>能解释一个基本的 ng 应用程序执行流程（见hello-world代码解析）</li>
-<li>能掌握 AngularJS 中的基本的指令和表达式的使用</li>
-<li>能掌握 AngularJS 中基本的模块使用（创建模块，依赖模块，获取模块）</li>
-<li>能使用 AngularJS 完成模拟用户注册功能</li>
+<p>img 标签没有跨域限制，但是得不到响应内容<br>link 标签没有跨域限制，能拿到响应内容<br>a 标签有跨域限制<br>所有能指定 src href 的标签都没有跨域限制<br>script 标签没有跨域限制</p>
+<p>当给 script 标签指定了 src 属性后，浏览器会对该地址发送请求<br>当请求响应成功之后，也就是拿到响应内容之后<br>浏览器会把得到的响应内容当作 JacaScript 语法去解析<br>所以把相应内容写成 JS 语法<br>这时候，服务器的响应换成了 js 语言<br>若响应内容为 json 格式 {“a”:”b”}<br>则拿不到，若内容为 var obj={“a”:”b”}<br>则能拿到数据</p>
+<ol>
+<li>创建一个 script 标签</li>
+<li>给 script 标签指定 src 属性</li>
+<li>将 script 标签放到 body 中</li>
 </ol>
+<p>var scriptElement = document.createElement(‘script’)<br>scriptElement.src=’<a href="http://127.0.0.1" target="_blank" rel="external">http://127.0.0.1</a>‘<br>// 当把 script 标签放到 DOM 中之后，并不是马上发起请求的<br>// 而且 script 指定的请求什么时候成功无法确定<br>// 也就是说响应回来的代码什么时候执行无法确定<br>document.body.appendChild(scriptElement)<br>// 当该标签请求成功并解析执行完 JS 代码之后，触发自己的 load 事件<br>// 然后执行该回调函数<br>// 思考：我们能不能在发送请求的时候，就告诉对方，给我定义一个什么变量名<br>// 让对方查询字符串，定义该变量名的对象<br>// 那么我们在使用的时候就能直接拿这个变量名来使用<br>scriptElement.addEventListener(‘load’,function(){console.log})<br>// 这样通过在后台获取到请求的变量名，将数据对象命名为该变量名<br>// 通过这种方法，我们前端就可以定义数据的变量名</p>
+<p>// 但是该方法不太好，升级一下<br>scriptElement.src=’<a href="http://127.0.0.1:3000?callback=getData" target="_blank" rel="external">http://127.0.0.1:3000?callback=getData</a>‘<br>后台响应 queryObj.callback +’（’+数据内容+’）’<br>function getData(data){<br>    得到数据内容 data<br>}</p>
+<p>现在封装一下这个方法，因为前后台交互常采用 json 格式<br>所以叫 jsonp ， p 是 pack 包装的意思</p>
+<p>function jsonp(url,{params},fn){<br>//第一步，解析处理 url<br>    var queryString = ‘’<br>    for(var key in params){<br>        queryString+=key + ‘ = ‘ + params[key] + ‘&amp;’<br>        //结尾多一个&amp; 不熟影响<br>    }</p>
+<pre><code>// 第二步，创建 script 标签，设置 src ，添加到 body
+var scriptElement = document.createElement(&apos;script&apos;)
+scriptElement.src=url
+document.body.appendChild(scriptElement)
+// 将用户传递进来的函数 fn 变为全局函数 fn
+window[abc] = fn
+//此时还有问题,每次暴露出去的函数名都是全局变量，多次调用jsonp会覆盖掉函数
+var callbackName = &apos;abc&apos; + (Math.random()).toString() 
+window[callbackName] = fn
+url = url + &apos;?&apos; + queryString + &apos;callback &apos; + callbackName&apos;
+</code></pre><p>}</p>
 
       
     </div>
@@ -386,13 +367,17 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/11/11/JSONP解决跨域/" rel="next" title="JSONP解决跨域">
-                <i class="fa fa-chevron-left"></i> JSONP解决跨域
+              <a href="/2014/10/07/使用github和hexo搭建博客/" rel="next" title="使用github和hexo搭建博客">
+                <i class="fa fa-chevron-left"></i> 使用github和hexo搭建博客
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/06/AnjularJs/" rel="prev" title="AnjularJs">
+                AnjularJs <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -492,7 +477,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AngularJS学习笔记（一）"><span class="nav-number">1.</span> <span class="nav-text">AngularJS学习笔记（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Awesome"><span class="nav-number">1.1.</span> <span class="nav-text">Awesome</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#框架和库"><span class="nav-number">1.2.</span> <span class="nav-text">框架和库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是AngularJS"><span class="nav-number">1.3.</span> <span class="nav-text">什么是AngularJS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于-AngularJS-的版本"><span class="nav-number">1.4.</span> <span class="nav-text">关于 AngularJS 的版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于-SPA-单页应用"><span class="nav-number">1.5.</span> <span class="nav-text">关于 SPA 单页应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单页应用的好处"><span class="nav-number">1.5.1.</span> <span class="nav-text">单页应用的好处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#锚点的使用"><span class="nav-number">1.5.2.</span> <span class="nav-text">锚点的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-AngularJS-的场景"><span class="nav-number">1.6.</span> <span class="nav-text">使用 AngularJS  的场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需要掌握"><span class="nav-number">1.7.</span> <span class="nav-text">需要掌握</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是跨域"><span class="nav-number">1.</span> <span class="nav-text">什么是跨域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#跨域的解决方案"><span class="nav-number">2.</span> <span class="nav-text">跨域的解决方案</span></a></li></ol></div>
             
           </div>
         </section>
