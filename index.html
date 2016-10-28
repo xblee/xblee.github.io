@@ -398,6 +398,141 @@
             
               
                 
+                <a class="post-title-link" href="/2014/10/07/使用github和hexo搭建博客/" itemprop="url">
+                  使用github和hexo搭建博客
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2014-10-07T16:05:56+08:00" content="2014-10-07">
+              2014-10-07
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="使用Github搭建博客"><a href="#使用Github搭建博客" class="headerlink" title="使用Github搭建博客"></a>使用Github搭建博客</h1><h2 id="使用-Hexo-搭建自己的个人静态博客"><a href="#使用-Hexo-搭建自己的个人静态博客" class="headerlink" title="使用 Hexo 搭建自己的个人静态博客"></a>使用 Hexo 搭建自己的个人静态博客</h2><ul>
+<li>必须安装 Node 环境<ul>
+<li>通过在终端任意目录输入 node -v 查看是否有输入node的版本</li>
+</ul>
+</li>
+<li>在终端的任意目录输入 npm install -g hexo-cli 然后回车执行等待安装成功<ul>
+<li>通过输入 hexo –version 如果看到输入一大堆的版本号就说明安装成功了</li>
+<li>Hexo 是一个命令行应用程序</li>
+</ul>
+</li>
+<li>接下来通过输入 hexo init 博客项目存储目录<ul>
+<li>Hexo 会在你执行该命令的目录下生成一个博客项目</li>
+<li>初始化博客项目的过程需要联网</li>
+</ul>
+</li>
+<li>接下来通过终端进入刚才创建的博客项目目录，然后在该目录下输入 npm install 回车等待执行结束</li>
+<li>接下来输入 hexo server 回车执行，它会在你的本地启动一个服务器，然后就可以访问你的博客项目</li>
+<li>进入博客项目，输入 hexo new 文章名称 创建博客<ul>
+<li>该命令会自动在 source/_posts/ 目录下生成一个 文章名称.md 文件</li>
+</ul>
+</li>
+<li>生成静态文件：hexo generate<ul>
+<li>该命令会自动在项目的根目录下的 public 目录下降静态文件放进去</li>
+</ul>
+</li>
+<li>快速部署<ul>
+<li>修改配置文件</li>
+<li>在项目根路径下执行 npm install hexo-deployer-git –save 该命令，为 hexo 安装 git 插件</li>
+<li>接下来就可以直接输入 hexo deploy –generate 自动发布到 github 上</li>
+</ul>
+</li>
+<li>评论功能<ul>
+<li>通过安装第三方插件，国内使用最多的是“多说”</li>
+<li>使用 多说 for node.js</li>
+<li>因为 hexo 是通过 node.js 开发的</li>
+<li>有的主题也自带评论功能</li>
+</ul>
+</li>
+</ul>
+<h2 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><p>部署到Github前需要配置_config.yml文件，首先找到下面的内容</p>
+<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><h2 id="Docs-http-hexo-io-docs-deployment-html"><a href="#Docs-http-hexo-io-docs-deployment-html" class="headerlink" title="Docs: http://hexo.io/docs/deployment.html"></a>Docs: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">http://hexo.io/docs/deployment.html</a></h2><p>deploy:<br>  type:<br>然后将它们修改为</p>
+<h1 id="Deployment-1"><a href="#Deployment-1" class="headerlink" title="Deployment"></a>Deployment</h1><h2 id="Docs-http-hexo-io-docs-deployment-html-1"><a href="#Docs-http-hexo-io-docs-deployment-html-1" class="headerlink" title="Docs: http://hexo.io/docs/deployment.html"></a>Docs: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">http://hexo.io/docs/deployment.html</a></h2><p>deploy:<br>  type: github<br>  repository: git@github.com:zhchnchn/zhchnchn.github.io.git<br>  branch: master</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2014/09/16/关于Giithub的使用/" itemprop="url">
                   关于Giithub的使用
                 </a>
@@ -1221,7 +1356,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
