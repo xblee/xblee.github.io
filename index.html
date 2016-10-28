@@ -503,6 +503,104 @@
             
               
                 
+                <a class="post-title-link" href="/2014/12/08/JSON-parse和eval的区别/" itemprop="url">
+                  JSON.parse和eval的区别
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2014-12-08T23:24:37+08:00" content="2014-12-08">
+              2014-12-08
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="JSON-parse-和-eval-的区别"><a href="#JSON-parse-和-eval-的区别" class="headerlink" title="JSON.parse 和 eval 的区别"></a>JSON.parse 和 eval 的区别</h1><p>JSON.parse()之可以解析json格式的数据，并且会对要解析的字符串进行格式检查，如果格式不正确则不进行解析，而eval()则可以解析任何字符串，eval是不安全的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &apos;alert(1000.toString())&apos;;</div><div class="line">eval(str);</div><div class="line">JSON.parse(str);</div></pre></td></tr></table></figure>
+<p>用eval可以解析，并且会弹出对话框，而用JSON.parse()则解析不了。<br>其实alert并没有什么坏处，可怕的是如果用恶意用户在json字符串中注入了向页面插入木马链接的脚本，<br>用eval也是可以操作的，而用JSON.parse()则不必担心这个问题。</p>
+<h2 id="JSON-parse-对json串的格式要求比较严格"><a href="#JSON-parse-对json串的格式要求比较严格" class="headerlink" title="JSON.parse()对json串的格式要求比较严格"></a>JSON.parse()对json串的格式要求比较严格</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var jsonStr1 = &apos;&#123;sex:&quot;男&quot;,info:&quot;我是好人&quot;&#125;&apos;;</div><div class="line">var jsonStr2 = &quot;&#123;&apos;sex&apos;:&apos;男&apos;,&apos;info&apos;:&apos;我是好人&apos;&#125;&quot;;</div><div class="line">var jsonStr3 = &apos;&#123;&quot;sex&quot;:&quot;男&quot;,&quot;info&quot;:&quot;我是好人&quot;&#125;&apos;;</div><div class="line"></div><div class="line">JSON.parse(jsonStr1)</div><div class="line">JSON.parse(jsonStr2)</div><div class="line">JSON.parse(jsonStr3)</div></pre></td></tr></table></figure>
+<p>只有 jsonStr3 正确</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2014/11/11/JSONP解决跨域/" itemprop="url">
                   JSONP解决跨域
                 </a>
@@ -1596,7 +1694,7 @@ url = url + &apos;?&apos; + queryString + &apos;callback &apos; + callbackName&a
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
