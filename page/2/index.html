@@ -171,7 +171,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -179,7 +179,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -195,7 +195,7 @@
         <li class="menu-item menu-item-schedule">
           <a href="/schedule" rel="section">
             
-            日程
+            Schedule
           </a>
         </li>
       
@@ -238,6 +238,558 @@
             
               
                 
+                <a class="post-title-link" href="/2015/06/22/get和post请求/" itemprop="url">
+                  get和post请求
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-06-22T13:10:18+08:00" content="2015-06-22">
+              2015-06-22
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="get和post请求"><a href="#get和post请求" class="headerlink" title="get和post请求"></a>get和post请求</h1><h2 id="http协议（超文本传输协议，基于请求和响应的协议）"><a href="#http协议（超文本传输协议，基于请求和响应的协议）" class="headerlink" title="http协议（超文本传输协议，基于请求和响应的协议）"></a>http协议（超文本传输协议，基于请求和响应的协议）</h2><p>所谓协议：规定、规范，由W3C起草<br>作用：用来规范浏览器与web服务器进行数据交互的一种格式<br>web服务器不管是客户端是IE、火狐还是谷歌，只要都按照http协议就可以解析<br>可以传输文本、图片、视频</p>
+<p>http协议的数据格式分为：请求数据格式、响应数据格式</p>
+<h2 id="发送请求"><a href="#发送请求" class="headerlink" title="发送请求"></a>发送请求</h2><ul>
+<li><p>get方式</p>
+<ul>
+<li>地址栏    </li>
+<li>点击超链接    </li>
+<li>直接在地址后面加需要的参数名称，参数对应的值</li>
+<li>多个参数时，用&amp;连接</li>
+<li><a href="demo.php?username = bob&age = 18">aaa</a></li>
+</ul>
+</li>
+<li><p>post方式</p>
+<ul>
+<li>表单提交</li>
+</ul>
+</li>
+</ul>
+<p>区别：</p>
+<ul>
+<li>get方式没有请求体</li>
+<li>get请求要给服务器发参数都在路径的后面加，大小受到限制</li>
+<li>post方式有请求体，内容就是发给服务器的参数，数据大小没有限制</li>
+<li>get提交方式会乱码，用post则不会，因为浏览器把请求体转码了</li>
+</ul>
+<p>请求首行——告诉服务器时get/post请求，告诉服务器要请求的内容地址、协议版本<br>请求头——每个请求头都有特定含义<br>请求空行——分隔的空行<br>请求体——发送到服务器的数据参数，只有post有请求体</p>
+<p>refer——请求头中的refer告诉服务器，当前请求来自哪个页面，地址栏输入时没有refer，超链接和表单提交有refer<br>user-Agent——告诉服务器浏览器版本</p>
+<p>响应首行——包含http协议版本<br>    状态码——200：响应成功<br>    状态码——404：请求资源未找到（路径出错）<br>    状态码——500：服务器内部出错，有bug<br>响应头—— Content-Type：text/html<br>    告诉浏览器响应的文件格式<br>    Refresh：4，url=http：//www.baidu.com<br>    4秒后跳转到百度<br>响应空行——分隔的空行<br>响应体——html页面</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/05/30/XML和JSON传输格式/" itemprop="url">
+                  XML和JSON传输格式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-05-30T22:18:47+08:00" content="2015-05-30">
+              2015-05-30
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="XML和JSON传输格式"><a href="#XML和JSON传输格式" class="headerlink" title="XML和JSON传输格式"></a>XML和JSON传输格式</h1><p>服务器返回的数据很多的时候，比如说12306<br>获取到这些数据后，进行解析，然后显示在页面对应区域<br>为了方便解析，数据在传递的时候要有一定的格式<br>数据交互时传的都是字符串，不能传数组<br>最常用的是XML与JSON</p>
+<h2 id="XML数据传输格式"><a href="#XML数据传输格式" class="headerlink" title="XML数据传输格式"></a>XML数据传输格式</h2><p>服务器从数据库获取到数据<br>$array = array(array(“username”=&gt;”li”,”age”=&gt;”18”),array(“username”=&gt;”bo”,”age”=&gt;”16”))<br>后台先把这组数据转为xml格式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;username&gt;</div><div class="line">    &lt;user&gt;</div><div class="line">        &lt;username&gt;li&lt;/username&gt;</div><div class="line">        &lt;age&gt;18&lt;/age&gt;</div><div class="line">    &lt;/user&gt;</div><div class="line"></div><div class="line">    &lt;user&gt;</div><div class="line">           &lt;username&gt;li&lt;/username&gt;</div><div class="line">           &lt;age&gt;18&lt;/age&gt;</div><div class="line">    &lt;/user&gt;</div><div class="line">&lt;/username&gt;</div></pre></td></tr></table></figure></p>
+<p>PHP中使用file_get_contents()来读取<br>转为字符串格式后，响应给客户端，由JS的xhr.responseText接收后去解析，把xml转为DOM</p>
+<h2 id="xml"><a href="#xml" class="headerlink" title="xml"></a>xml</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">//文档声明 版本</div><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</div><div class="line">//根目录，只有一个根目录，其他标签都写在根目录中</div><div class="line">//html的标签都是固定的，但xml的标签都是自定义的</div><div class="line">&lt;users&gt;</div><div class="line">    &lt;user&gt;</div><div class="line">        &lt;username&gt;关羽&lt;/username&gt;</div><div class="line">        &lt;age&gt;23&lt;/age&gt;</div><div class="line">        &lt;zym&gt;我就是我，不一样的烟火&lt;/zym&gt;</div><div class="line">        &lt;imageURL&gt;image/1.jpg&lt;/imageURL&gt;</div><div class="line">    &lt;/user&gt;</div><div class="line">    &lt;user&gt;</div><div class="line">        &lt;username&gt;张飞&lt;/username&gt;</div><div class="line">        &lt;age&gt;22&lt;/age&gt;</div><div class="line">        &lt;zym&gt;宝宝就是我&lt;/zym&gt;</div><div class="line">        &lt;imageURL&gt;image/2.jpg&lt;/imageURL&gt;</div><div class="line">    &lt;/user&gt;</div><div class="line">    &lt;user&gt;</div><div class="line">        &lt;username&gt;刘备&lt;/username&gt;</div><div class="line">        &lt;age&gt;24&lt;/age&gt;</div><div class="line">        &lt;zym&gt;彪悍的人生不需要解释&lt;/zym&gt;</div><div class="line">        &lt;imageURL&gt;image/3.jpg&lt;/imageURL&gt;</div><div class="line">    &lt;/user&gt;</div><div class="line">&lt;/users&gt;</div><div class="line">php</div><div class="line">&lt;?php</div><div class="line">        header(&quot;Content-Type:text/xml;charset=utf-8&quot;);</div><div class="line">       $data=file_get_contents(&quot;02.xml&quot;);</div><div class="line">        echo $data;</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+<p>html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">    &lt;style&gt;</div><div class="line">        table &#123;</div><div class="line">            width: 600px;</div><div class="line">            border-collapse: collapse;</div><div class="line">        &#125;</div><div class="line">        td &#123;</div><div class="line">            height: 40px;</div><div class="line">            text-align: center;</div><div class="line">            border: 1px solid #CCC;</div><div class="line">        &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;input type=&quot;button&quot; value=&quot;查询用户信息&quot; id=&quot;buttonId&quot;&gt;</div><div class="line">&lt;table&gt;</div><div class="line">    &lt;tr&gt;</div><div class="line">        &lt;td&gt;用户名&lt;/td&gt;</div><div class="line">        &lt;td&gt;年龄&lt;/td&gt;</div><div class="line">        &lt;td&gt;座右铭&lt;/td&gt;</div><div class="line">        &lt;td&gt;形象照&lt;/td&gt;</div><div class="line">    &lt;/tr&gt;</div><div class="line">&lt;/table&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    document.querySelector(&quot;#buttonId&quot;).onclick = function () &#123;</div><div class="line">        var xhr = new XMLHttpRequest();</div><div class="line">        xhr.open(&quot;POST&quot;, &quot;02xml.php&quot;);</div><div class="line">        xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);</div><div class="line">        xhr.send(null);</div><div class="line">        xhr.onreadystatechange = function () &#123;</div><div class="line">            if (xhr.readyState == 4 &amp;&amp; xhr.status == 200) &#123;</div><div class="line">                //通过responseXML获取xml数据</div><div class="line">                var data = xhr.responseXML;</div><div class="line">                //我要解析数据</div><div class="line">                var users = data.getElementsByTagName(&quot;users&quot;)[0];</div><div class="line">                //JQuery的children方法</div><div class="line">                var childs = users.children;</div><div class="line">                for (var i = 0; i &lt; childs.length; i++) &#123;</div><div class="line">                   </div><div class="line">                    var tr = document.createElement(&quot;tr&quot;);</div><div class="line">                    var td1 = document.createElement(&quot;td&quot;);</div><div class="line">                    var td2 = document.createElement(&quot;td&quot;);</div><div class="line">                    var td3 = document.createElement(&quot;td&quot;);</div><div class="line">                    var td4 = document.createElement(&quot;td&quot;);</div><div class="line">                    td1.innerHTML = childs[i].getElementsByTagName(&quot;username&quot;)[0].innerHTML;</div><div class="line">                    td2.innerHTML = childs[i].getElementsByTagName(&quot;age&quot;)[0].innerHTML;</div><div class="line">                    td3.innerHTML = childs[i].getElementsByTagName(&quot;zym&quot;)[0].innerHTML;</div><div class="line">                    //获取到的是一个字符串</div><div class="line">                    var imageURL = childs[i].getElementsByTagName(&quot;imageURL&quot;)[0].innerHTML;</div><div class="line">                    //我创建要给img 元素  把地址设置到这个image 元素上面。</div><div class="line">                    //var img=document.createElement(&quot;img&quot;).setAttribute(&quot;src&quot;,imageURL);</div><div class="line">                    var myImage = document.createElement(&quot;img&quot;);</div><div class="line">                    myImage.setAttribute(&quot;src&quot;, imageURL);</div><div class="line">                    myImage.setAttribute(&quot;width&quot;, &quot;200&quot;);</div><div class="line">                    myImage.setAttribute(&quot;height&quot;, &quot;200&quot;);</div><div class="line">                    td4.appendChild(myImage);</div><div class="line">                    tr.appendChild(td1);</div><div class="line">                    tr.appendChild(td2);</div><div class="line">                    tr.appendChild(td3);</div><div class="line">                    tr.appendChild(td4);</div><div class="line">                    document.querySelector(&quot;table&quot;).appendChild(tr);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="JSON传输格式"><a href="#JSON传输格式" class="headerlink" title="JSON传输格式"></a>JSON传输格式</h2><p>json比xml更轻量级，使用的更多<br>但xml作为最早使用的格式，市场比例也很多<br>JSON注意点：PHP==&gt; header(“Content-Type:text/html;charset=utf-8”)</p>
+<pre><code>JS==&gt;var data = xhr.responseText
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/05/25/使用wamp搭建服务器环境/" itemprop="url">
+                  使用wamp搭建服务器环境
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-05-25T18:07:31+08:00" content="2015-05-25">
+              2015-05-25
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="使用-wamp-搭建服务器环境"><a href="#使用-wamp-搭建服务器环境" class="headerlink" title="使用 wamp 搭建服务器环境"></a>使用 wamp 搭建服务器环境</h1><h2 id="wamp有三个软件"><a href="#wamp有三个软件" class="headerlink" title="wamp有三个软件"></a>wamp有三个软件</h2><p>C:\wamp\bin\apache    apache软件<br>C:\wamp\bin\mysql      musql软件<br>C:\wamp\bin\php          php软件</p>
+<h2 id="配置apache"><a href="#配置apache" class="headerlink" title="配置apache"></a>配置apache</h2><p>我现在通过127.0.0.1 是可以访问的，我通过192.168.39.91 不可以访问，会出现一个权限问题<br>  C:\wamp\bin\apache\Apache2.2.21\conf\httpd.conf<br>235行    添加 Allow form all（允许所有人通过IP访问本机），现在大家可以通过<a href="http://192.168.39.91/" target="_blank" rel="external">http://192.168.39.91/</a> 来访问本机<br>默认以后我们开发好的网页都需要放在wamp C:\wamp\www 的这个位置<br>那么现在通过    <a href="http://192.168.39.91:80/xxxx.html" target="_blank" rel="external">http://192.168.39.91:80/xxxx.html</a>    就可以访问 C:\wamp\www 下以index开头的页面</p>
+<h2 id="更改网页存放路径的位置"><a href="#更改网页存放路径的位置" class="headerlink" title="更改网页存放路径的位置"></a>更改网页存放路径的位置</h2><pre><code>178 行     DocumentRoot &quot;f:/workspace/&quot;
+205 行     f:/workspace/
+之前我访问http://192.168.39.91:80 它是去c://wamp/www 下面找内容
+现在是去f:/workspace
+同时将webstrom工作空间指定到这里，可以免去每次将网页放到apache路径中
+</code></pre><h2 id="配置虚拟主机"><a href="#配置虚拟主机" class="headerlink" title="配置虚拟主机"></a>配置虚拟主机</h2><pre><code>目的：通过    http://www.taobao.com  访问我自己的页面，而不是访问淘宝
+步骤：①进入到我本机的一个hosts 文件里面进行查找
+    C:/windows/system32/drivers/etc/hosts文件
+    写入127.0.0.1（本机地址）   www.taobao.com （进入hosts找这个网址，如果有则不去DNS查找）
+②配置apache
+    C:\wamp\bin\apache\Apache2.2.21\conf\httpd.con 
+    467行把注释打开
+③找到conf/extra/httpd-vhosts.conf，
+    复制一个27-34行，将serverName改为taobao.com
+    ServerA;ias改为www.taobao.com
+    DocumentRoot路径改为www文件夹
+④重启wamp
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/05/23/PHP的简单语法了解/" itemprop="url">
+                  PHP的简单语法了解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-05-23T15:05:12+08:00" content="2015-05-23">
+              2015-05-23
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="PHP-的简单语法"><a href="#PHP-的简单语法" class="headerlink" title="PHP 的简单语法"></a>PHP 的简单语法</h1><h2 id="PHP的基本编写"><a href="#PHP的基本编写" class="headerlink" title="PHP的基本编写"></a>PHP的基本编写</h2><p>在index.php中正常书写html结构，可以正常解析html<br>当需要动态资源的时候，加&lt;?php        ?&gt;<br>&lt;?php<br>        header(“Content - Type: text/html ; charset = utf-8”); //解决乱码<br>?&gt;</p>
+<h2 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h2><html><br>&lt;?php    if($uesername = “bob”){    ?&gt;<br>        console.log(“lee”);    //这部分属于php外部，如果逻辑为true则能显示出这部分，如果逻辑为false，则不能显示这部分<br> &lt;?php   }    ?&gt;<br></html>
+
+
+<p><html><br>&lt;?php    for($i=0;$i&lt;=1000;$i++){    &gt;<br>        <div>&lt;?php    echo    $i;    ?&gt;<div><br> &lt;?php   }    ?&gt;<br></div></div></html><br>{    会去找    }，假如没找到会报错，如果找到了，会把这些代码连为一个整体</p>
+<p>定义变量：$username = “boblee”；<br>变量类型：1、字符串    2、整型    3、浮点型    4、boolean型    5、数组    6、对象     7、null</p>
+<p>字符串    $username = “boblee”;<br>                echo    $username</p>
+<p>整型        $age = 18;<br>                echo    $age</p>
+<p>浮点型    $price = “99.99”;<br>                echo    $price</p>
+<p>布尔        $flag = true;<br>                echo    $flag ==&gt;1 (1代表true)<br>               $flag = false;<br>                echo    $flag ==&gt;什么都没有</p>
+<h2 id="PHP的字符串相加"><a href="#PHP的字符串相加" class="headerlink" title="PHP的字符串相加"></a>PHP的字符串相加</h2><p>&lt;?php<br>    $username = “bob”;<br>    $sex = “lee”;<br>    echo    $username.$sex.”123”==&gt;boblee123<br>?&gt;</p>
+<h2 id="普通数组"><a href="#普通数组" class="headerlink" title="普通数组"></a>普通数组</h2><p>$arr = array(“1”,”2”,”3”,”4”);<br>遍历普通数组<br>for($i=0;$i&lt;$count($arr);$i++)<br>        注意：php不支持length属性，使用的是count（统计）</p>
+<h2 id="关联数组"><a href="#关联数组" class="headerlink" title="关联数组"></a>关联数组</h2><p>关联数组的数据是有关联的，通过键值对相关联<br>$arr = array(“username”=&gt;”boblee”,”age”=&gt;”18”);</p>
+<h2 id="遍历关联数组"><a href="#遍历关联数组" class="headerlink" title="遍历关联数组"></a>遍历关联数组</h2><p>foreach（$array    as    $键）{<br>    echo    $键;<br>}<br>foreach（$array    as    $键=&gt;$值）{<br>    echo    $键;<br>    echo    $值;<br>}</p>
+<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><p>数组里面还有数组<br>$array    =    array(<br>    array(“username”=&gt;”bo”,”age”=&gt;”16”)<br>    array(“username”=&gt;”xiao”,”age”=&gt;”16”)<br>    array(“username”=&gt;”li”,”age”=&gt;”16”)<br>)<br>//循环数组<br>for($i=0;$i<count($array);$i++){ 循环关联数组="" foreach($array[$i]="" as="" $key="">$val){<br>        echo    $key.”===”.$val;<br>    }<br>    echo    “<br>“;<br>}</count($array);$i++){></p>
+<p>服务器接收请求后，要去获取用户数据<br>从数据库获取数据，获取的数据一般都会存在一个存储区里<br>可以理解为存在一个数组里<br>把这个数组向页面动态输出，遍历数组<br>展示多条记录，一般在页面中做一个table<br>常见的输出函数</p>
+<p>echo            向页面输出字符串、整型、浮点、布尔<br>print_r          向页面输出数组<br>var_dump    向页面输出数组（更加详细）<br>自定义函数</p>
+<p>function    kill(    ){<br>    echo    “boblee”;<br>}</p>
+<h2 id="kill"><a href="#kill" class="headerlink" title="kill(    )"></a>kill(    )</h2><p>function    kill($username){<br>    echo    “boblee”.$username;<br>}</p>
+<h2 id="kill-“li”"><a href="#kill-“li”" class="headerlink" title="kill(“li”);"></a>kill(“li”);</h2><p>function    kill($username=”li”){<br>    echo    “boblee”.$username;<br>}</p>
+<h2 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h2><p>count（）    相当于JS中的length<br>in_array（）是否在数组中    in_array(“bob”,$array1);<br>array_key_exists    检查数组中是否存在某key   array_key_exists (“username”,$array2);<br>file_get_contents    获取文件内容，有返回值，返回文件内容，内容必须是字符串<br>    $data = file_get_contents(“demo.txt”);<br>    echo    $data;</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/04/28/关于ES5的数组forEach方法/" itemprop="url">
+                  关于ES5的数组forEach方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-04-28T18:21:13+08:00" content="2015-04-28">
+              2015-04-28
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="数组的-forEach-方法"><a href="#数组的-forEach-方法" class="headerlink" title="数组的 forEach 方法"></a>数组的 forEach 方法</h1><p>ES5 新增的数组的 forEach 方法<br>用来遍历数组<br>比如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[1,2,3,4].forEach(alert)</div></pre></td></tr></table></figure></p>
+<p>等同于<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var array=[1,2,3,4]</div><div class="line">for(var i=0,i&lt;array.length;i++)&#123;</div><div class="line">    alert(array[k])</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>该方法传入的参数为</p>
+<p>[].forEach(function(value,index,array){})</p>
+<p>另外forEach循环不能退出，匹配到了还会继续循环，有损性能</p>
+<p>对比 jQuery 中的 $.each 方法</p>
+<p>$.each([],function(index,value,array){})</p>
+<p>他们的传参顺序是不同的</p>
+<p>类似的还有 jQuery 中的 map 方法</p>
+<h2 id="forEach-方法的特点"><a href="#forEach-方法的特点" class="headerlink" title="forEach 方法的特点"></a>forEach 方法的特点</h2><p>forEach 循环不能退出，即使匹配到了也会把后续的循环执行完</p>
+<p>这里不能用 break 和 return 来打断</p>
+<p>注意： 没有办法中止或者跳出 forEach 循环，除了抛出一个异常。如果你需要这样，使用forEach()方法是错误的，你可以用一个简单的循环作为替代。如果您正在测试一个数组里的元素是否符合某条件，且需要返回一个布尔值，那么可使用 Array.every 或 Array.some。<br>some 只要一个返回 true 则遍历结束<br>every 所有都要为 true</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/02/14/关于bower的使用/" itemprop="url">
                   关于bower的使用
                 </a>
@@ -251,7 +803,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2015-02-14T23:29:02+08:00" content="2015-02-14">
               2015-02-14
             </time>
@@ -416,7 +968,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2015-01-13T19:25:14+08:00" content="2015-01-13">
               2015-01-13
             </time>
@@ -525,7 +1077,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2014-12-08T23:24:37+08:00" content="2014-12-08">
               2014-12-08
             </time>
@@ -623,7 +1175,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2014-11-11T22:15:40+08:00" content="2014-11-11">
               2014-11-11
             </time>
@@ -758,7 +1310,7 @@ url = url + &apos;?&apos; + queryString + &apos;callback &apos; + callbackName&a
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2014-10-07T16:05:56+08:00" content="2014-10-07">
               2014-10-07
             </time>
@@ -859,814 +1411,11 @@ url = url + &apos;?&apos; + queryString + &apos;callback &apos; + callbackName&a
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2014/09/16/关于Giithub的使用/" itemprop="url">
-                  关于Giithub的使用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2014-09-16T11:07:38+08:00" content="2014-09-16">
-              2014-09-16
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="安装和配置-Git-环境"><a href="#安装和配置-Git-环境" class="headerlink" title="安装和配置 Git 环境"></a>安装和配置 Git 环境</h2><p>下载地址：<a href="https://git-for-windows.github.io/" target="_blank" rel="external">https://git-for-windows.github.io/</a></p>
-<h2 id="初始设置"><a href="#初始设置" class="headerlink" title="初始设置"></a>初始设置</h2><p>$ git config –global user.name “yourname”<br>$ git config –global user.email “your_email@xx.com”</p>
-<p>在任何目录下执行以上两行代码，且只需安装时执行一次即可</p>
-<p>若想要修改，可再次执行该代码修改即可</p>
-<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><ul>
-<li>git init<ul>
-<li>创建一个本地仓库</li>
-<li>执行过后，会在目录下生成一个 .git 隐藏目录，最好不要手动修改</li>
-</ul>
-</li>
-<li>git status<ul>
-<li>查看当前工作树状态</li>
-<li>例如有新增的、修改的、删除的等操作没有被 add 到暂存区或者 commit 到本地仓库的</li>
-</ul>
-</li>
-<li>git add 文件名<ul>
-<li>将指定的文件 add 到暂存区</li>
-</ul>
-</li>
-<li>git commit -m”输入提交日志内容”<ul>
-<li>将暂存区中的文件提交到本地仓库，并且形成一个提交快照</li>
-</ul>
-</li>
-<li>git log <ul>
-<li>查看提交日志</li>
-</ul>
-</li>
-<li>gitk<ul>
-<li>以图形化的界面查看本地仓库提交日志状态</li>
-</ul>
-</li>
-</ul>
-<h2 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h2><ul>
-<li>git branch<ul>
-<li>查看分支</li>
-</ul>
-</li>
-<li>git branch （name）<ul>
-<li>创建分支</li>
-</ul>
-</li>
-<li>git checkout （name）<ul>
-<li>切换分支</li>
-</ul>
-</li>
-<li>git checkout -<ul>
-<li>交替切换分支</li>
-</ul>
-</li>
-<li>git checkout -b （name）<ul>
-<li>创建并切换分支</li>
-</ul>
-</li>
-<li>git checkout -b <name> <name><ul>
-<li>基于某个分支创建新的分支并切换到该分支</li>
-</ul>
-</name></name></li>
-<li>git merge （name）<ul>
-<li>合并某个分支到当前分支</li>
-</ul>
-</li>
-<li>git merge –no-ff <name> -m “提交日志”<ul>
-<li>合并某分支到当前分支并提交日志</li>
-</ul>
-</name></li>
-<li>git branch -d （name）<ul>
-<li>删除分支</li>
-</ul>
-</li>
-<li>git log –graph<ul>
-<li>以图表形式查看日志</li>
-</ul>
-</li>
-</ul>
-<h2 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h2><ul>
-<li>master<ul>
-<li>代码块应该有且仅有一个主分支，所有提供给用户使用的正式版本，都在这个主分支上发布</li>
-<li>Git 主分支默认叫做 master</li>
-</ul>
-</li>
-<li>develop<ul>
-<li>日常开发应该在另一条分支上完成。我们把开发用的分支，叫做Develop</li>
-<li>如果想正式对外发布，就在Master分支上，对Develop分支进行”合并”（merge）</li>
-<li>合并的时候最好采用 –no-ff 的形式，在 master 上形成一个提交历史记录节点</li>
-</ul>
-</li>
-<li>feature-特性名<ul>
-<li>针对某个具体功能创建的一个分支</li>
-<li>开发的时候，所有开发人员针对 develop 进行开发，然后合并到 master<ul>
-<li>然后我们可以基于 develop 分支创建一些特性分支（一般是开发人员自己创建的）</li>
-<li>团队开发人员都最好都基于 develop 分支去创建自己对应的特性分支，最后去和 develop 分支进行合并</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>release <ul>
-<li>与发布分支</li>
-<li>发布之前先将 develop 分支预发布到 release 发布分支中</li>
-<li>接下来，测试人员就可以拿到这个 release 分支版本，进行测试</li>
-<li>测试人员如果在测试的过程中发现 bug，会将 bug 告诉响应的开发人员，bug 追踪系统</li>
-</ul>
-</li>
-<li>fixbug <ul>
-<li>修改 bug 分支</li>
-<li>该分支用于解决测试人员提交给你的 bug 的</li>
-<li>fixbug 分支解决完毕之后，最后再次合并到 release 预发布分支中</li>
-<li>再次交给测试人员，测试人员回去通过这个分支版本继续测试，找 bug</li>
-<li>直到最后没有问题，合并到 master 分支中</li>
-</ul>
-</li>
-</ul>
-<h2 id="更改提交的操作"><a href="#更改提交的操作" class="headerlink" title="更改提交的操作"></a>更改提交的操作</h2><p>指定文件回滚：</p>
-<ul>
-<li>git checkout [file]<ul>
-<li>恢复暂存区的指定文件到工作区</li>
-</ul>
-</li>
-<li>git checkout [commit] [file]<ul>
-<li>恢复到某个 commit 指定文件到暂存区和工作区</li>
-</ul>
-</li>
-<li>git checkout<ul>
-<li>恢复暂存区的所有文件到工作区</li>
-</ul>
-</li>
-</ul>
-<p>指定版本回滚：</p>
-<ul>
-<li>git reset –hard<ul>
-<li>恢复暂存区和工作区到上一次最新的提交</li>
-</ul>
-</li>
-<li>git reset –hard 提交哈希值<ul>
-<li>根据提交哈希值（版本号）回溯到历史版本</li>
-</ul>
-</li>
-<li>git reflog<ul>
-<li>查看当前仓库操作日志</li>
-</ul>
-</li>
-<li>git commit –amend<ul>
-<li>修改最近一次提交的提交日志</li>
-</ul>
-</li>
-</ul>
-<h2 id="推送至远程仓库"><a href="#推送至远程仓库" class="headerlink" title="推送至远程仓库"></a>推送至远程仓库</h2><p>如果已经有了一个本地仓库，就可以通过下面的形式和线上的空仓库（Github）产生关联：</p>
-<ul>
-<li>remote 添加远程仓库地址</li>
-<li>add commit branch 等操作</li>
-<li><p>push</p>
-</li>
-<li><p>git remote add origin 远程仓库地址</p>
-<ul>
-<li>git 会自动将远程仓库地址起个别名 origin</li>
-</ul>
-</li>
-<li>git push -u origin master<ul>
-<li>推送到名称为 origin 远程仓库地址下的 master 分支下</li>
-</ul>
-</li>
-</ul>
-<h2 id="从远程仓库获取"><a href="#从远程仓库获取" class="headerlink" title="从远程仓库获取"></a>从远程仓库获取</h2><p>如果已经创建了一个远程仓库，就可以遵循下面的模式进行开发：</p>
-<ul>
-<li>clone</li>
-<li>add commit branch 等操作</li>
-<li><p>Pull</p>
-</li>
-<li><p>git clone 仓库地址</p>
-<ul>
-<li>git 会自动将 origin 设置为该远程仓库地址的标识符</li>
-</ul>
-</li>
-<li>git pull</li>
-</ul>
-<p>所以在进行 push 之前，最好先 pull 一下，拉取最新源代码。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2014/09/15/SVN/" itemprop="url">
-                  版本控制概述及SVN
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2014-09-15T16:58:12+08:00" content="2014-09-15">
-              2014-09-15
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="版本控制及-SVN"><a href="#版本控制及-SVN" class="headerlink" title="版本控制及 SVN"></a>版本控制及 SVN</h1><h2 id="版本控制可以解决的问题"><a href="#版本控制可以解决的问题" class="headerlink" title="版本控制可以解决的问题"></a>版本控制可以解决的问题</h2><ol>
-<li>历史记录</li>
-</ol>
-<ul>
-<li>记录每次更改日志</li>
-</ul>
-<ol>
-<li>多人协作</li>
-</ol>
-<ul>
-<li>各自编写代码，最后合并整合 </li>
-</ul>
-<h2 id="使用的软件"><a href="#使用的软件" class="headerlink" title="使用的软件"></a>使用的软件</h2><ul>
-<li>记录一款软件添加或更改源代码的过程</li>
-<li>回滚到特定阶段，恢复误删除的文件</li>
-<li>合并多人协作的文件等</li>
-</ul>
-<h2 id="集中式版本控制-SVN（Apache-Subversion）"><a href="#集中式版本控制-SVN（Apache-Subversion）" class="headerlink" title="集中式版本控制 - SVN（Apache Subversion）"></a>集中式版本控制 - SVN（Apache Subversion）</h2><h3 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h3><ul>
-<li>源代码库（repository）：源代码统一存放的地方</li>
-<li>检出（checkout）：当你手上没有源代码的时候，就需要从 responsive checkout 一份</li>
-<li>提交（commit）：当你已经修改了代码，就需要 commit 到 repository</li>
-<li>更新（update）：当你已经 checkout 了一份源代码，Update 一下就可以和 repository 上的源代码同步，你手上的代码就会有最新的变更</li>
-</ul>
-<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><pre><code>集中式版本管理将所有的数据集中存放在服务器中，这是有便于统一管理的优点。
-
-但是一旦开发者所处的环境不能连接服务器，就无法获取最新源代码，开发也就无法进行。
-
-服务器宕机时也是同样的道理，而且万一服务器故障导致数据丢失， 恐怕开发者就再也见不到最新的源代码了。
-</code></pre><h3 id="使用-VisualSVN-搭建-SVN-服务器"><a href="#使用-VisualSVN-搭建-SVN-服务器" class="headerlink" title="使用 VisualSVN 搭建 SVN 服务器"></a>使用 VisualSVN 搭建 SVN 服务器</h3><pre><code>SVN 服务器分为了命令行工具和图形化工具
-
-为了方便，一般采用图形化工具
-</code></pre><ul>
-<li>创建用户或组</li>
-<li>创建版本仓库</li>
-<li>设定用户权限</li>
-</ul>
-<h3 id="使用-TortoiseSVN-作为-SVN-的客户端"><a href="#使用-TortoiseSVN-作为-SVN-的客户端" class="headerlink" title="使用 TortoiseSVN 作为 SVN 的客户端"></a>使用 TortoiseSVN 作为 SVN 的客户端</h3><ul>
-<li>检出项目： checkout</li>
-<li>增加文件或目录： add （增加） commit （提交）</li>
-<li>修改文件或目录： commit （提交）</li>
-<li>删除文件或目录： commit （提交）</li>
-<li>更新文件或目录： update （更新）</li>
-<li>查看版本日志： log （日志）</li>
-</ul>
-<h3 id="建议（防止冲突）"><a href="#建议（防止冲突）" class="headerlink" title="建议（防止冲突）"></a>建议（防止冲突）</h3><ul>
-<li>一个文件最好同一时间只被一个人修改提交</li>
-<li>多跟团队成员沟通</li>
-<li>不要随便去修改别人的文件</li>
-<li>使用 SVN 解决冲突很繁琐，现在用的人也越来越少了</li>
-</ul>
-<h2 id="版本控制的建议"><a href="#版本控制的建议" class="headerlink" title="版本控制的建议"></a>版本控制的建议</h2><ul>
-<li>不要频繁的提交版本<ul>
-<li>一般有比较成熟的功能模块的时候，再去提交</li>
-<li>修复了功能性 bug 的时候再去提交</li>
-</ul>
-</li>
-<li>每次 commit 之前都要 update<ul>
-<li>因为你在编辑这个文件的时候，可能比人已经编辑并提价了某个版本</li>
-<li>所以先 update，目的是为了检查一下服务器上有没有最新版，如果有，直接更新<br>  *更新的过程中如果遇到冲突，不要慌，去手动解决</li>
-</ul>
-</li>
-<li>每次 commit 的时候都要写提交日志<ul>
-<li>这个提交日志就好比你保存副本的时候加的一个标记</li>
-<li>目的是为了日后做版本的回退查找以及查看记录更新状态</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2014/08/27/命令行/" itemprop="url">
-                  命令行
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2014-08-27T22:42:30+08:00" content="2014-08-27">
-              2014-08-27
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h1><h2 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h2><h3 id="shell-就是一个程序，接收键盘输入的命令，传给操作系统去执行"><a href="#shell-就是一个程序，接收键盘输入的命令，传给操作系统去执行" class="headerlink" title="shell 就是一个程序，接收键盘输入的命令，传给操作系统去执行"></a>shell 就是一个程序，接收键盘输入的命令，传给操作系统去执行</h3><p>几乎所有的 Linux 都提供了一个名为 bash 的 shell 程序</p>
-<h2 id="终端仿真器"><a href="#终端仿真器" class="headerlink" title="终端仿真器"></a>终端仿真器</h2><p>当使用图形用户界面时，我们需要另一个和 shell 交互的叫做终端仿真器的程序。 在 Windows 上，一般使用操作系统自带的 cmd 或者 powershell。 在 Linux 上，如果是图形用户界面，那么可以使用 terminal 或者 konsole、gnome-terminal 之类 的终端仿真器，但基本上，它们都完成同样的事情，让我们能访问 shell， 你可能会因为附加的一些花俏功能而喜欢上某个终端。</p>
-<p>关于名字，如果有人提到：控制台、终端、bash、shell、terminal 等，一般都是指上面这些。</p>
-<p>一般在 Linux 上，都会提供一个 bash 或者 terminal 之类的工具，让你来使用 shell</p>
-<h2 id="安装-Git-for-Windows-客户端体验-shell"><a href="#安装-Git-for-Windows-客户端体验-shell" class="headerlink" title="安装 Git for Windows 客户端体验 shell"></a>安装 Git for Windows 客户端体验 shell</h2><p>Git for Windows 客户端自带了一个终端仿真器：git bash</p>
-<p>[下载地址：]（<a href="https://git-for-windows.github.io/）" target="_blank" rel="external">https://git-for-windows.github.io/）</a></p>
-<p>git for Windows - github 托管地址 ，然后找到 Realease 模块，找到下载的对应版本即可。</p>
-<p>注意：虽然在 Windows 上可以通过 cmd 或 powershell 体验终端的使用， 但是学习终端最正确的方式是学习 Linux 上的命令行，要更纯正，更强大。</p>
-<p>所以，我们这里通过使用 Git for Windows 客户端（自带了一个 bash）可以供我们学习 shell。</p>
-<h2 id="打开和退出终端"><a href="#打开和退出终端" class="headerlink" title="打开和退出终端"></a>打开和退出终端</h2><h2 id="命令提示符"><a href="#命令提示符" class="headerlink" title="命令提示符"></a>命令提示符</h2><p>git bash 中使用 ~ 来表示用户目录</p>
-<h2 id="使用终端操作文件系统"><a href="#使用终端操作文件系统" class="headerlink" title="使用终端操作文件系统"></a>使用终端操作文件系统</h2><ul>
-<li>绝对路径和相对路径</li>
-<li>pwd （print working directory） <ul>
-<li>查看当前路径</li>
-</ul>
-</li>
-<li>cd （change directory）<ul>
-<li>切换到指定路径</li>
-</ul>
-</li>
-<li>ls （list files）<ul>
-<li>ls <ul>
-<li>列出当前目录文件</li>
-</ul>
-</li>
-<li>ls 目录路径<ul>
-<li>列出指定路径文件</li>
-</ul>
-</li>
-<li>ls -a <ul>
-<li>列出文件并显示隐藏文件</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>cp （copy）<ul>
-<li>cp 源路径 目标路径</li>
-<li>cp 在复制目录的时候，不会复制里面的子目录和子文件</li>
-<li>cp -r 递归复制（深度复制）</li>
-</ul>
-</li>
-<li>mv （move）<ul>
-<li>移动文件或目录，也可以重命名</li>
-</ul>
-</li>
-<li>mkdir （make directory）<ul>
-<li>创建目录</li>
-</ul>
-</li>
-<li>rm （remove）<ul>
-<li>删除</li>
-<li>-r 递归删除</li>
-</ul>
-</li>
-<li>rmdir 目录名称<ul>
-<li>删除指定空目录</li>
-</ul>
-</li>
-<li>clear 清屏</li>
-<li>touch 文件名<ul>
-<li>创建该文件</li>
-</ul>
-</li>
-<li>cat 文件名<ul>
-<li>查看指定的文本文件</li>
-</ul>
-</li>
-</ul>
-<h2 id="使用-less-命令浏览文件内容"><a href="#使用-less-命令浏览文件内容" class="headerlink" title="使用 less 命令浏览文件内容"></a>使用 less 命令浏览文件内容</h2><p>less 命令是一个用来浏览文本文件的程序</p>
-<p>less 文本文件名</p>
-<p>在 less 中使用 q 退出 less 程序</p>
-<h2 id="文本编辑器-vi"><a href="#文本编辑器-vi" class="headerlink" title="文本编辑器 vi"></a>文本编辑器 vi</h2><p>vi 全称 visual interface</p>
-<p>类似于 windows 中的记事本 notepad</p>
-<p>但比 notepad 强大很多</p>
-<h2 id="vi-操作"><a href="#vi-操作" class="headerlink" title="vi 操作"></a>vi 操作</h2><ul>
-<li>vi 启动vi</li>
-<li>:q 退出vi</li>
-<li>:q! 强制退出</li>
-<li>esc 按两次可以退回普通模式</li>
-<li>vi 文件名 创建新文件</li>
-<li>vi 文件名 编辑已有文件</li>
-<li>i 进入插入模式 insert 后才能编辑文本内容<ul>
-<li>输入完成后按 ESC 退出插入模式到命令模式</li>
-</ul>
-</li>
-</ul>
-<h2 id="保存工作"><a href="#保存工作" class="headerlink" title="保存工作"></a>保存工作</h2><ul>
-<li>:w 保存</li>
-<li>:wq 保存并退出</li>
-<li>ZZ 保存并退出</li>
-<li>:w 文件名 指定可选文件名 类似于另存为</li>
-</ul>
-<h2 id="基本编辑"><a href="#基本编辑" class="headerlink" title="基本编辑"></a>基本编辑</h2><h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><ul>
-<li>a 越过行尾，进入插入模式</li>
-<li>A 直接移动到当前行末尾，进入插入模式</li>
-<li>o 在当前行的下方打开一行，进入插入模式</li>
-<li>O 在当前行的上方打开一行，进入插入模式</li>
-</ul>
-<h3 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h3><ul>
-<li>u 撤销最后一次修改</li>
-<li>ctrl + r 回复撒谎那个一步被撤销的操作</li>
-</ul>
-<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><ul>
-<li>x 删除当前字符</li>
-<li>3x 删除当前字符及气候的两个字符</li>
-<li>dd 删除当前行</li>
-<li>5dd 当前行及随后的四行文本</li>
-<li>dW 从光标开始位置到下一个单词的开头</li>
-<li>d$ 从光标位置开始到当前行的行尾。</li>
-<li>d0 从光标位置开始到当前行的行首。</li>
-<li>dˆ 从光标位置开始到文本行的第一个非空字符。</li>
-<li>dG 从当前行到文件的末尾。</li>
-<li>d20G 从当前行到文件的第 20 行</li>
-</ul>
-<h3 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h3><ul>
-<li>yy 当前行。</li>
-<li>5yy 当前行及随后的四行文本。</li>
-<li>yW 从当前光标位置到下一个单词的开头。</li>
-<li>y$ 从当前光标位置到当前行的末尾。</li>
-<li>y0 从当前光标位置到行首。</li>
-<li>yˆ 从当前光标位置到文本行的第一个非空字符。</li>
-<li>yG 从当前行到文件末尾。</li>
-<li>y20G 从当前行到文件的第 20 行。</li>
-<li>J 把行与行之间连接起来</li>
-</ul>
-<h3 id="粘贴"><a href="#粘贴" class="headerlink" title="粘贴"></a>粘贴</h3><ul>
-<li>p 将剪切板中的文本粘贴到光标位置之后</li>
-<li>P 将文本粘贴到光标之前</li>
-</ul>
-<h3 id="查找替换"><a href="#查找替换" class="headerlink" title="查找替换"></a>查找替换</h3><ul>
-<li>f 要查找的字符<ul>
-<li>通过输入分号查找当前行下一个</li>
-</ul>
-</li>
-<li>/ 要查找的字符 <ul>
-<li>输入 n 查找下一个</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2014/08/22/关于Markdown的使用/" itemprop="url">
-                  关于Markdown的使用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2014-08-22T19:20:03+08:00" content="2014-08-22">
-              2014-08-22
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="关于-Markdown-的使用"><a href="#关于-Markdown-的使用" class="headerlink" title="关于 Markdown 的使用"></a>关于 Markdown 的使用</h1><h2 id="Markdow-的优点"><a href="#Markdow-的优点" class="headerlink" title="Markdow 的优点"></a>Markdow 的优点</h2><ul>
-<li>纯文本，所以兼容性极强，可以用所有文本编辑器打开</li>
-<li>专注于文字写作而不是排版</li>
-<li>格式转换方便，可以轻松转换为 HTML、PPT、电子书等</li>
-<li>Markdown 标记语法简单好记，可读性强</li>
-</ul>
-<h2 id="实时预览编辑器"><a href="#实时预览编辑器" class="headerlink" title="实时预览编辑器"></a>实时预览编辑器</h2><ul>
-<li>dillinger</li>
-<li>马克飞象</li>
-<li>简书</li>
-<li>MarkdownPad</li>
-<li>Sublime Text</li>
-<li>配合 Markdown Preview 插件</li>
-<li>Webstorm</li>
-<li>配合插件</li>
-<li>gitbook</li>
-<li>visual studio code</li>
-</ul>
-<h2 id="Markdow-的基本语法"><a href="#Markdow-的基本语法" class="headerlink" title="Markdow 的基本语法"></a>Markdow 的基本语法</h2><ul>
-<li>标题</li>
-<li>段落</li>
-<li>粗体<ul>
-<li><strong>加粗</strong></li>
-</ul>
-</li>
-<li>斜体</li>
-<li>无序列表</li>
-<li>有序列表</li>
-<li>链接<ul>
-<li>[标题]（网址）</li>
-</ul>
-</li>
-<li>图片<ul>
-<li>！[标题]（路径）</li>
-</ul>
-</li>
-<li>文本引用<ul>
-<li>&gt;</li>
-</ul>
-</li>
-<li>行内代码引用</li>
-<li>多行代码引用<ul>
-<li>用```包括</li>
-</ul>
-</li>
-<li>表格</li>
-</ul>
-<h2 id="使用-Markdow-来写一封漂亮的电子邮件"><a href="#使用-Markdow-来写一封漂亮的电子邮件" class="headerlink" title="使用 Markdow 来写一封漂亮的电子邮件"></a>使用 Markdow 来写一封漂亮的电子邮件</h2><p>其实就是将 md 格式字符串转换为 HTML<br>这里使用一个 Chrome 插件</p>
-<p>[Markdow Here]</p>
-<h2 id="使用-GitBook-制作电子书"><a href="#使用-GitBook-制作电子书" class="headerlink" title="使用 GitBook 制作电子书"></a>使用 GitBook 制作电子书</h2><p>[GitBook]</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1707,8 +1456,8 @@ url = url + &apos;?&apos; + queryString + &apos;callback &apos; + callbackName&a
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
@@ -1755,7 +1504,7 @@ url = url + &apos;?&apos; + queryString + &apos;callback &apos; + callbackName&a
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">

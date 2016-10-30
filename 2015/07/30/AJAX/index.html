@@ -1,0 +1,587 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="AJAX同步交互客户端给服务器请求，服务器给客户端响应响应回来的页面会把原来的页面覆盖掉服务器给客户端进行处理，处理过程中，用户只能等待，不能操作
+异步交互客户端给服务器请求，服务器给客户端响应响应回来的页面不会把原来的页面覆盖掉用户可以进行其他操作
+XMLHttpRequestjs提供了一个构造函数——XMLHttpRequest它可以用来发送请求和接收响应数据返回后，它可以把数据写到页面上通过">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AJAX">
+<meta property="og:url" content="http://yoursite.com/2015/07/30/AJAX/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="AJAX同步交互客户端给服务器请求，服务器给客户端响应响应回来的页面会把原来的页面覆盖掉服务器给客户端进行处理，处理过程中，用户只能等待，不能操作
+异步交互客户端给服务器请求，服务器给客户端响应响应回来的页面不会把原来的页面覆盖掉用户可以进行其他操作
+XMLHttpRequestjs提供了一个构造函数——XMLHttpRequest它可以用来发送请求和接收响应数据返回后，它可以把数据写到页面上通过">
+<meta property="og:updated_time" content="2016-10-30T07:12:20.010Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AJAX">
+<meta name="twitter:description" content="AJAX同步交互客户端给服务器请求，服务器给客户端响应响应回来的页面会把原来的页面覆盖掉服务器给客户端进行处理，处理过程中，用户只能等待，不能操作
+异步交互客户端给服务器请求，服务器给客户端响应响应回来的页面不会把原来的页面覆盖掉用户可以进行其他操作
+XMLHttpRequestjs提供了一个构造函数——XMLHttpRequest它可以用来发送请求和接收响应数据返回后，它可以把数据写到页面上通过">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/07/30/AJAX/"/>
+
+
+  <title> AJAX | Hexo </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Hexo</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule" rel="section">
+            
+            Schedule
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                AJAX
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-07-30T23:40:20+08:00" content="2015-07-30">
+              2015-07-30
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h1><h2 id="同步交互"><a href="#同步交互" class="headerlink" title="同步交互"></a>同步交互</h2><p>客户端给服务器请求，服务器给客户端响应<br>响应回来的页面会把原来的页面覆盖掉<br>服务器给客户端进行处理，处理过程中，用户只能等待，不能操作</p>
+<h2 id="异步交互"><a href="#异步交互" class="headerlink" title="异步交互"></a>异步交互</h2><p>客户端给服务器请求，服务器给客户端响应<br>响应回来的页面不会把原来的页面覆盖掉<br>用户可以进行其他操作</p>
+<h2 id="XMLHttpRequest"><a href="#XMLHttpRequest" class="headerlink" title="XMLHttpRequest"></a>XMLHttpRequest</h2><p>js提供了一个构造函数——XMLHttpRequest<br>它可以用来发送请求和接收响应<br>数据返回后，它可以把数据写到页面上<br>通过xml可以发送请求首行、请求头、请求体<br>通过xml可以接收响应首行、响应头、响应体</p>
+<p>通过XMLHttpRequest和服务器的交互</p>
+<p>常见200表示成功，403没有权限，404未找到，500服务器错误<br>304走的是缓存，也可以认为是请求成功了</p>
+<h2 id="get提交"><a href="#get提交" class="headerlink" title="get提交"></a>get提交</h2><pre><code>创建对象    var    xhr = new XMLHttpRequest（）
+跟服务器连接    xhr.open(&quot;GET&quot;,&quot;get.php?username = lixiaobo&quot;)
+发送数据    xhr.send(null)    //get方式提交不发送数据，但是必须写null
+接收数据    编写一个回调函数    //每当 readyState 属性改变时，就会调用该函数
+        xhr.onreadystatechange = function (){
+            //xhr.readyState 是服务器的返回状态 0,1,2,3,4 其中4代表服务器响应完毕
+            //xhr.status 是获取服务器状态，200为响应成功，404为请求资源未找到，500为服务器内部出错
+
+            if(xhr.readyState == 4 &amp;&amp; xhr.status == 200){
+                var data = xhr.responseText
+            }
+        }    
+</code></pre><h2 id="post提交"><a href="#post提交" class="headerlink" title="post提交"></a>post提交</h2><pre><code>var    xhr = new XMLHttpRequest（）
+xhr.open(&quot;POST&quot;,&quot;post.php&quot;)
+xhr.setRequestHeader(&quot;Content-Type&quot;,&quot;application/x-www-form-urlencoded&quot;)
+xhr.send(“username =“+ input.value+”&amp;password =“+input2.value) 
+xhr.onreadystatechange = function (){
+    if(xhr.readyState == 4 &amp;&amp; xhr.status == 200){
+                var data = xhr.responseText
+            }
+ }  
+</code></pre><h2 id="案例：用户名检测"><a href="#案例：用户名检测" class="headerlink" title="案例：用户名检测"></a>案例：用户名检测</h2><p>html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">用户名:&lt;input type=&quot;text&quot; id=&quot;username&quot;&gt;</div><div class="line">&lt;!-- 密码:&lt;input type=&quot;text&quot; id=&quot;password&quot;&gt;--&gt;</div><div class="line">&lt;input type=&quot;button&quot; value=&quot;检测用户名是否已经存在&quot; id=&quot;buttonId&quot;&gt;</div><div class="line">&lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    var input = document.getElementById(&quot;username&quot;);</div><div class="line">    /*var password=document.getElementById(&quot;password&quot;);*/</div><div class="line">    document.querySelector(&quot;#buttonId&quot;).onclick = function () &#123;</div><div class="line">        var xhr = new XMLHttpRequest();</div><div class="line">        xhr.open(&quot;post&quot;, &quot;03register.php&quot;);</div><div class="line">        xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);</div><div class="line">        //如果我是ajax 提交，我是自己通过dom 去获取数据把数据发送给服务器。</div><div class="line">        xhr.send(&quot;username=&quot; + input.value);</div><div class="line">        /* xhr.send(&quot;username=&quot;+input.value+&quot;&amp;password=&quot;+password.value);*/</div><div class="line">        xhr.onreadystatechange = function () &#123;</div><div class="line">            if (xhr.readyState == 4 &amp;&amp; xhr.status == 200) &#123;</div><div class="line">                var data = xhr.responseText;</div><div class="line">                document.querySelector(&quot;.box1&quot;).innerHTML = data;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>php<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">//            获取到数据，然后来一个判断</div><div class="line">             $data=$_POST;</div><div class="line">             $username=$data[&apos;username&apos;];</div><div class="line">            //如果是真实的开发，我们是拿这条记录到数据库里面对比一下。</div><div class="line">             if($username==&quot;zhouchao&quot;)&#123;</div><div class="line">                    echo &quot;&lt;font color=&apos;red&apos;&gt;该用户名已经存在哦&lt;/font&gt;&quot;;</div><div class="line">             &#125;else&#123;</div><div class="line">                   echo &quot;该用户名可以使用哦&quot;;</div><div class="line">            &#125;</div><div class="line">?&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="JQuery-提供的-AJAX-方法"><a href="#JQuery-提供的-AJAX-方法" class="headerlink" title="JQuery 提供的 AJAX 方法"></a>JQuery 提供的 AJAX 方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">    type:&quot;GET&quot;,</div><div class="line">    url:&quot;./ajax.php&quot;,</div><div class="line">    data:&#123;</div><div class="line">        username:&quot;bo&quot;,</div><div class="line">        age:18</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//get方法只能发送get请求,post方法只能发送post请求</div><div class="line">$.get(url,data,callback)</div><div class="line">$.post(url,data,callback)</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/06/22/get和post请求/" rel="next" title="get和post请求">
+                <i class="fa fa-chevron-left"></i> get和post请求
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/11/16/HTML5概述/" rel="prev" title="HTML5概述">
+                HTML5概述 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="John Doe" />
+          <p class="site-author-name" itemprop="name">John Doe</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AJAX"><span class="nav-number">1.</span> <span class="nav-text">AJAX</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#同步交互"><span class="nav-number">1.1.</span> <span class="nav-text">同步交互</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异步交互"><span class="nav-number">1.2.</span> <span class="nav-text">异步交互</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XMLHttpRequest"><span class="nav-number">1.3.</span> <span class="nav-text">XMLHttpRequest</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#get提交"><span class="nav-number">1.4.</span> <span class="nav-text">get提交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#post提交"><span class="nav-number">1.5.</span> <span class="nav-text">post提交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#案例：用户名检测"><span class="nav-number">1.6.</span> <span class="nav-text">案例：用户名检测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JQuery-提供的-AJAX-方法"><span class="nav-number">1.7.</span> <span class="nav-text">JQuery 提供的 AJAX 方法</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
