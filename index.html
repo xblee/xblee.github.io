@@ -238,6 +238,258 @@
             
               
                 
+                <a class="post-title-link" href="/2016/01/19/AnjularJS-2/" itemprop="url">
+                  AnjularJS-2
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-19T22:41:46+08:00" content="2016-01-19">
+              2016-01-19
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="AngularJS-（二）"><a href="#AngularJS-（二）" class="headerlink" title="AngularJS （二）"></a>AngularJS （二）</h1><p>解析过程如下图：</p>
+<p><img src="img/Anjular解析.png" alt="执行流程"></p>
+<h2 id="模块化-module"><a href="#模块化-module" class="headerlink" title="模块化 module"></a>模块化 module</h2><p>AngularJS 很重要的一个特性就是实现模块化编程，我们可以创建一个模块， 对页面进行功能业务上的划分。</p>
+<p>开发单页应用时，要根据不同的业务划分不同的模块，这样就可以把 JS 代码写到多个文件中。</p>
+<p>ng 中模块的引入最重要的目的就是为了解决原来全局定义的控制器污染的问题，还有一个目的就是让我们以模块的形式划分架构。</p>
+<h3 id="定义模块"><a href="#定义模块" class="headerlink" title="定义模块"></a>定义模块</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// 注意：必须指定第二个参数，哪怕是空数组，否则变成获取已定义的模块</div><div class="line">var demoApp = angular.module(&apos;DemoApp&apos;, [])</div></pre></td></tr></table></figure>
+<h3 id="获取已有模块"><a href="#获取已有模块" class="headerlink" title="获取已有模块"></a>获取已有模块</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var demoApp = angular.module(&apos;DemoApp&apos;)</div></pre></td></tr></table></figure>
+<h3 id="定义依赖别的模块的模块"><a href="#定义依赖别的模块的模块" class="headerlink" title="定义依赖别的模块的模块"></a>定义依赖别的模块的模块</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var demoApp = angular.module(&apos;DemoApp&apos;, [&apos;Module1&apos;, &apos;Module2&apos;])</div></pre></td></tr></table></figure>
+<p>通过该方法可以重用其他模块的数据和逻辑</p>
+<h2 id="如何划分模块"><a href="#如何划分模块" class="headerlink" title="如何划分模块"></a>如何划分模块</h2><p>一般情况下，根据当前需要开发的应用程序的组成划分需要多少模块</p>
+<p>例如：</p>
+<ul>
+<li>注册模块</li>
+<li>登陆模块</li>
+<li>商品列表页模块</li>
+<li>商品详细页模块</li>
+<li>等等.</li>
+</ul>
+<h2 id="Angular-Directive：指令"><a href="#Angular-Directive：指令" class="headerlink" title="Angular Directive：指令"></a>Angular Directive：指令</h2><p>当网页加载完毕，AnjularJS 自动开始执行</p>
+<ul>
+<li>AngularJS 指令是扩展的 HTML 属性，带有前缀 ng-。</li>
+<li>AngularJS 通过内置的指令来为应用添加功能，</li>
+<li><p>AngularJS 同时允许你使用内置指令或者自定义指令，从而构建更加超动感的 HTML。</p>
+</li>
+<li><p>ng-xxx 的属性本身并不是标准中定义的属性</p>
+</li>
+<li>很多情况下无法通过语法校验</li>
+<li>HTML5 允许扩展的属性，以 <code>data-</code> 开头</li>
+<li>在 ng 中可以使用 <code>data-ng-</code> 作为前缀来让网页对 HTML5 有效</li>
+<li>二者效果相同</li>
+</ul>
+<h3 id="常用的指令"><a href="#常用的指令" class="headerlink" title="常用的指令"></a>常用的指令</h3><ul>
+<li>ng-app<ul>
+<li>该指令告诉 AngularJS ，该标签内的元素为 AngularJS 应用程序管理的边界</li>
+</ul>
+</li>
+<li>ng-init<ul>
+<li>该指令初始化 AngularJS 应用程序变量</li>
+</ul>
+</li>
+<li>ng-model <ul>
+<li>该指令把文本框的 value 值绑定到变量 name 上</li>
+<li>双向绑定</li>
+<li>改变了视图中的数据，模型中的数据也会跟着改变</li>
+<li>改变了模型中的数据，视图中的数据也会跟着改变</li>
+<li>所以我们只需要关注模型中的数据即可</li>
+</ul>
+</li>
+<li>ng-click<ul>
+<li>给元素绑定一个事件</li>
+</ul>
+</li>
+<li>ng-repeat<ul>
+<li>遍历循环数组</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>插值表达式，就是把应用程序的变量 name 绑定到某个元素的 innerHTML 上</li>
+</ul>
+</li>
+<li>ng-bind<ul>
+<li>类似于表达式，用法基本一致</li>
+</ul>
+</li>
+<li>ng-class</li>
+<li>ng-hide-show-if</li>
+<li>ng-src</li>
+</ul>
+<h3 id="其他常用指令"><a href="#其他常用指令" class="headerlink" title="其他常用指令"></a>其他常用指令</h3><ul>
+<li>ng-checked : 单选/复选是否选中，只是单向绑定数据</li>
+<li>ng-disabled : 是否禁用</li>
+<li>ng-readonly : 是否只读</li>
+<li>ng-selected : 是否选中，只是单向数据绑定</li>
+</ul>
+<h3 id="事件指令"><a href="#事件指令" class="headerlink" title="事件指令"></a>事件指令</h3><ul>
+<li>ng-blur ：失去焦点</li>
+<li>ng-focus ：得到焦点</li>
+<li>ng-change ：发生改变</li>
+<li>ng-copy ：拷贝完成</li>
+<li>ng-click ：鼠标单击</li>
+<li>ng-dblclick ：鼠标双击</li>
+<li>ng-submit：表单提交</li>
+</ul>
+<h2 id="scope"><a href="#scope" class="headerlink" title="$scope"></a>$scope</h2><ul>
+<li>ng 内置提供了一个 $scope ，即数据模型</li>
+<li>$scope 是用来视图和数据之间的胶水、粘合剂</li>
+<li>视图和控制器之间的数据桥梁</li>
+<li>用于在视图和控制器之间传递数据</li>
+<li>用来暴露数据模型（数据、行为）</li>
+<li>监视模型数据的变化，做出相应的动作 $scope.$watch</li>
+</ul>
+<h2 id="控制器-controller"><a href="#控制器-controller" class="headerlink" title="控制器 controller"></a>控制器 controller</h2><p>为了避免全局污染，将控制器放到模块中，如果想要在视图中访问定义好的函数里面的 $scope 数据模型对象，<br>就需要通过 ng-controller 的形式，指定该全局作用域中的函数名称，通过控制器可以拿到 $scope，<br>这样就可以直接在所有被 ng-controller 包裹中的元素中使用该函数的 $scope，<br>ng-controller = ‘函数名’，当解析到这里时，ng 会调用该函数<br>同时初始化生成一个 $scope 仓库</p>
+<p>在单页面应用中，一般是根据不同的业务划分不同的模块<br>根据不同的功能划分不同的控制器（数据模型对象）<br>控制器就是为了手动获取到对应的数据模型对象<br>基本是所有的代码都写在 controller 中，操作数据模型对象</p>
+<ul>
+<li>ng 中的控制器用来对 $scope 进行操作<ul>
+<li>包括初始化数据和定义事件响应函数等</li>
+</ul>
+</li>
+<li>ng 用来解耦业务逻辑层和视图层的关键</li>
+<li>controller 操作 $scope，View 则展现 $scope 的内容</li>
+<li>传统前端程序中大量复杂的 DOM 操作逻辑都被转变成对 $scope 的操作</li>
+</ul>
+<h2 id="定义控制器的方式"><a href="#定义控制器的方式" class="headerlink" title="定义控制器的方式"></a>定义控制器的方式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 解决因为代码压缩造成注入对象失败问题的方式就是将第二个参数换成一个数组</div><div class="line">// 传参顺序没有影响</div><div class="line">// controller 的第二个参数数组中按 function 中的参数顺序写上参数,这样就可以混淆压缩了</div><div class="line">angular.module(&apos;DemoApp&apos;, [])</div><div class="line">  .controller(&apos;DemoCtrl&apos;, [&apos;$scope&apos;, &apos;$log&apos;, function ($scope, $log) &#123;</div><div class="line">    // code here</div><div class="line">  &#125;])</div></pre></td></tr></table></figure>
+<h2 id="window"><a href="#window" class="headerlink" title="$window"></a>$window</h2><p>AngularJS 不推荐使用 Dom 操作<br>所以不建议在控制器中写 window<br>ng 将 window 封装成了 $window<br>通过控制器的参数传入</p>
+<h2 id="http"><a href="#http" class="headerlink" title="$http"></a>$http</h2><p>ng 中，将 $http 通过参数传入控制器<br>就能在控制器中调用 $http 方法来发送请求</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$http(&#123;</div><div class="line">    method:&apos;GET&apos;,</div><div class="line">    url:&apos;someUrl&apos;</div><div class="line">&#125;).then(function successCallback(response)&#123;</div><div class="line">    //成功函数</div><div class="line">&#125;,function error(response)&#123;</div><div class="line">    //失败函数</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>$window  $http 等都叫做 service 服务 ，通过控制器传入</p>
+<h2 id="用户注册案例"><a href="#用户注册案例" class="headerlink" title="用户注册案例"></a>用户注册案例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;script src=&quot;bower_components/angular/angular.js&quot;&gt;&lt;/script&gt;</div><div class="line">    </div><div class="line">    &lt;body ng-app=&quot;Userapp&quot;&gt;</div><div class="line">    	&lt;table ng-controller=&quot;Userctrl&quot;&gt;</div><div class="line">    		&lt;tr&gt;</div><div class="line">    			&lt;td&gt;用户名&lt;/td&gt;</div><div class="line">    			&lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&quot;username&quot;&gt;&lt;/td&gt;</div><div class="line">    		&lt;/tr&gt;</div><div class="line">    		&lt;tr&gt;</div><div class="line">    			&lt;td&gt;密码&lt;/td&gt;</div><div class="line">    			&lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&quot;password&quot;&gt;&lt;/td&gt;</div><div class="line">    		&lt;/tr&gt;</div><div class="line">    		&lt;tr&gt;</div><div class="line">    			&lt;td&gt;重复密码&lt;/td&gt;</div><div class="line">    			&lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&quot;confrim&quot;&gt;&lt;/td&gt;</div><div class="line">    		&lt;/tr&gt;</div><div class="line">    		&lt;tr&gt;</div><div class="line">    			&lt;td&gt;是否同意&lt;/td&gt;</div><div class="line">    			&lt;td&gt;&lt;input type=&quot;checkbox&quot; ng-model=&quot;agree&quot;&gt;&lt;/td&gt;</div><div class="line">    		&lt;/tr&gt;</div><div class="line">            &lt;tr ng-hide=&quot;!msg&quot;&gt;</div><div class="line">                &lt;td colspan=&quot;2&quot; ng-model=&quot;msg&quot;&gt;&#123;&#123;msg&#125;&#125;&lt;/td&gt;</div><div class="line">            &lt;/tr&gt;</div><div class="line">    		&lt;tr&gt;</div><div class="line">    			&lt;td&gt;&lt;button ng-click=&quot;reg()&quot;&gt;点击注册&lt;/button&gt;&lt;/td&gt;</div><div class="line">    		&lt;/tr&gt;</div><div class="line">    	&lt;/table&gt;</div><div class="line">        &lt;hr&gt;</div><div class="line">        &lt;table ng-controller=&quot;Loginctrl&quot;&gt;</div><div class="line">            &lt;tr&gt;</div><div class="line">                &lt;td&gt;用户名&lt;/td&gt;</div><div class="line">                &lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&apos;username&apos;&gt;&lt;/td&gt;</div><div class="line">            &lt;/tr&gt;</div><div class="line">            &lt;tr&gt;</div><div class="line">                &lt;td&gt;密码&lt;/td&gt;</div><div class="line">                &lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&apos;password&apos;&gt;&lt;/td&gt;</div><div class="line">            &lt;/tr&gt;</div><div class="line">            &lt;tr&gt;</div><div class="line">                &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;点击登录&quot; ng-click=&apos;login()&apos;&gt;&lt;/td&gt;</div><div class="line">            &lt;/tr&gt;</div><div class="line">        &lt;/table&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        angular.module(&quot;Userapp&quot;,[])</div><div class="line">            .controller(&quot;Userctrl&quot;,[&apos;$scope&apos;,&apos;$window&apos;,function($scope,$window)&#123;</div><div class="line">                $scope.username=&quot;&quot;;</div><div class="line">                $scope.password=&quot;&quot;;</div><div class="line">                $scope.confrim=&quot;&quot;;</div><div class="line">                $scope.agree=false;</div><div class="line">                $scope.msg=&quot;&quot;;</div><div class="line">                $scope.reg=function()&#123;</div><div class="line">                    //校验是否同意用户规则</div><div class="line">                    if(!$scope.agree)&#123;</div><div class="line">                        return $scope.msg=&quot;请同意用户规则&quot;;</div><div class="line">                    &#125;;</div><div class="line">                    //校验用户名是否为空</div><div class="line">                    if($scope.username.trim().length === 0)&#123;</div><div class="line">                        return $scope.msg=&quot;用户名不能为空&quot;</div><div class="line">                    &#125;;</div><div class="line">                    // 校验用户名,3-9位，必须为字母、数字</div><div class="line">                    // js中的test()方法,用于检测一个字符串是否匹配某个模式</div><div class="line">                    if(!/^(\w|\d)&#123;3,9&#125;$/.test($scope.username))&#123;</div><div class="line">                        return $scope.msg=&quot;用户名必须为3-9位字母、数字&quot;</div><div class="line">                    &#125;;</div><div class="line">                    // 校验密码是否为空</div><div class="line">                    if($scope.confrim.trim().length===0||</div><div class="line">                        $scope.password.trim().length===0)&#123;</div><div class="line">                        return $scope.msg=&quot;密码不能为空&quot;</div><div class="line">                    &#125;;</div><div class="line">                    // 校验密码是否为3-9位字母、数字</div><div class="line">                    if(!/^(\w|\d)&#123;3,9&#125;$/.test($scope.password))&#123;</div><div class="line">                        return $scope.msg=&quot;密码必须为3-9位字母、数字&quot;</div><div class="line">                    &#125;;</div><div class="line">                    //校验重复密码是否和密码一致</div><div class="line">                    if($scope.confrim.trim()!==$scope.password.trim())&#123;</div><div class="line">                        return $scope.msg=&quot;两次密码必须一致&quot;</div><div class="line">                    &#125;;</div><div class="line">                    // 执行注册，向后台发送ajax请求</div><div class="line">                    // 将表单数据通过ajax发送给后台</div><div class="line">                    // 后台检测没有问题后会将数据存储到数据库中</div><div class="line">                    // 并向前端响应成功还是不成功</div><div class="line"></div><div class="line">                    // ng 不推荐直接操作 window 所以ng将window转换成 $window</div><div class="line">                    // 通过参数$window传入控制器，这里$window就是window</div><div class="line">                    var users=JSON.parse($window.localStorage.getItem(&apos;users&apos;)||&apos;[]&apos;);</div><div class="line"></div><div class="line">                    </div><div class="line">                    if(users.some(function(user,insex)&#123;</div><div class="line">                        return user.username===$scope.username;</div><div class="line">                    &#125;))&#123;</div><div class="line">                        return $scope.msg=&quot;用户名被占用&quot;;</div><div class="line">                    &#125;;</div><div class="line"></div><div class="line">                    users.push(&#123;</div><div class="line">                        username:$scope.username,</div><div class="line">                        password:$scope.password</div><div class="line">                    &#125;);</div><div class="line">                    </div><div class="line">                    //将数据持久化到本地</div><div class="line">                    $window.localStorage.setItem(&apos;users&apos;,JSON.stringify(users));</div><div class="line"></div><div class="line">                    // 当所有校验都没问题时，将msg隐藏</div><div class="line">                    $scope.msg=&quot;注册成功&quot;;</div><div class="line">                &#125;;</div><div class="line">                $window.$scope=$scope;</div><div class="line">            &#125;])</div><div class="line">            .controller(&quot;Loginctrl&quot;,[&apos;$scope&apos;,&apos;$window&apos;,function($scope,$window)&#123;</div><div class="line">                $scope.username=&apos;&apos;;</div><div class="line">                $scope.password=&apos;&apos;;</div><div class="line">                $scope.login=function()&#123;</div><div class="line">                    var users=JSON.parse($window.localStorage.getItem(&apos;users&apos;)||&apos;[]&apos;);</div><div class="line">                    if(users.some(function(user,insex)&#123;</div><div class="line">                        return user.username===$scope.username&amp;&amp;</div><div class="line">                        user.password===$scope.password;</div><div class="line">                    &#125;))&#123;</div><div class="line">                        return $window.alert(&apos;登录成功&apos;);</div><div class="line">                    &#125;;</div><div class="line">                </div><div class="line">                &#125;;</div><div class="line">            &#125;]);</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h2 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h2><ul>
+<li>内置过滤器<ul>
+<li>filter</li>
+<li>pageSize</li>
+<li>pageNum</li>
+<li>等等</li>
+</ul>
+</li>
+<li>自定义过滤器<ul>
+<li>自定义过滤器一定要通过 fillter 模块去定义</li>
+<li>自定义过滤器只能在定义的模块中使用，别的模块想使用，需先依赖这个模块<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.filter(&apos;happy&apos;,function()&#123;</div><div class="line">    //target 就是要过滤的原数据</div><div class="line">    return function(target)&#123;</div><div class="line">        return &apos;hello&apos;+target</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>过滤器可以对输出的数据做格式化输出，或者按照条件过滤数组、对象等数据中的内容</p>
+<p>过滤器的格式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">表达式 | 指定过滤方式</div></pre></td></tr></table></figure></p>
+<h2 id="调试工具"><a href="#调试工具" class="headerlink" title="调试工具"></a>调试工具</h2><p>在开发过程中，需要将 $scope 暴露到全局中进行调试，查看 $scope 对象中的属性</p>
+<p>如果有多个控制器，这种做法就不太合适</p>
+<p>所以在这里用一个 Chrome 插件 AnjularJS Batarang </p>
+<p>以 http 协议访问页面，控制台中就多了一个 AnjularJS 项</p>
+<h2 id="ng-submit"><a href="#ng-submit" class="headerlink" title="ng-submit"></a>ng-submit</h2><p>可以用 form 表单的 ng-submit 来替代回车事件</p>
+<h2 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h2><ul>
+<li>内置服务</li>
+<li>自定义服务</li>
+</ul>
+<p>ng 中将 $scope $window  $http 等都叫做服务</p>
+<p>在 ng 中，假设同一页面有两个模块，两个模块都有一个 input 标签，需要进行增删改查，</p>
+<p>又假设没有后台接口，只能进行本地存储到 localStorage ，那么就会造成数据混乱，</p>
+<p>此时使用 ng 的服务，调用这个服务，就可以完成增删改查</p>
+<p>将增删改查的方法封装到服务中，在多个页面都可以调用这个服务，进行增删改查</p>
+<p>同时 ng 不支持使用全局函数，容易引起全局变量命名冲突污染</p>
+<p>所以将各方法定义到服务模块中</p>
+<p>服务是在控制器中使用，以依赖的形式注入，ng 会自动帮我们创建服务对象</p>
+<p>然后在里面通过 this 给构造函数添加静态方法</p>
+<p>总结：</p>
+<p>服务就是用来获取数据或者说操作数据的，不关心视图，不关心界面交互<br>可以将服务定义成全局构造函数的形式，但是会污染全局变量<br>所以 ng 提供了一种自定义服务的机制，可以基于模块去定义服务，然后在控制器里面使用该服务<br>这样的话就避免了全局污染的问题<br>给 app 模块定义一个服务<br>第一个参数就是服务的名称，也就是你原来的构造函数的名字<br>第二个参数可以直接传递一个函数（类似于原来控制器的写法）<br>服务本身也可以使用别的服务<br>第二个参数，就是一个构造函数，可以直接在里面通过 this 给该构造函数添加静态方法<br>使用服务的时候，肯定是在控制器里面使用服务，使用的时候，ng 会帮我们自动去创建服务对象<br>然后就可以直接使用里面通过 this 定义的方法了</p>
+<h2 id="anjular-element"><a href="#anjular-element" class="headerlink" title="anjular.element()"></a>anjular.element()</h2><p>将一个 DOM 对象转换为 JQuery 对象的方法</p>
+<p>ng 内置了一个 angular.element(DOM),可以得到转换过后的 JQuery 对象</p>
+<h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><p>将用户的联网需求，发送到一个具体的另一个路由器中，这个过程就叫做路由</p>
+<p>在 SPA 单页面中，用户通过哪个路径能访问到哪个页面或模块，这就是路由</p>
+<p>使用 JS 监听路由的话是 window.addEventListener(‘hashchange’,function(){})</p>
+<p>使用 ng 的话，下载 ngRoute， npm install angular-route@X,Y,Z</p>
+<p>将 angular.js 和 anjular-route.js 引入页面</p>
+<p>创建模块，同时添加依赖项 ngRoute</p>
+<p>调用模块的 config 方法，注入一个 $routeProvider 对象</p>
+<p>需要以 http 协议访问</p>
+<p>可以在页面中挖个坑， <div ng-view=""></div>,当路由为 / 时，template:’</p><h1>hello</h1>‘就会被填到坑中<p></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">angular.module(&apos;DemoApp&apos;, [&apos;ngRoute&apos;])</div><div class="line">      .config([&apos;$routeProvider&apos;, function($routeProvider) &#123;</div><div class="line">        $routeProvider</div><div class="line">          .when(&apos;/&apos;, &#123;</div><div class="line">            templateUrl: &apos;index.html&apos;,</div><div class="line">            controller: &apos;IndexController&apos;,</div><div class="line">          &#125;)</div><div class="line">          .when(&apos;/login&apos;, &#123;</div><div class="line">            templateUrl: &apos;login.html&apos;,</div><div class="line">            controller: &apos;LoginController&apos;,</div><div class="line">          &#125;)</div><div class="line">          .when(&apos;/register&apos;, &#123;</div><div class="line">            templateUrl: &apos;register.html&apos;,</div><div class="line">            controller: &apos;RegisterController&apos;,</div><div class="line">          &#125;)</div><div class="line">      &#125;])</div><div class="line"></div><div class="line">angular.module(&apos;DemoApp&apos;)</div><div class="line">      .controller(&apos;IndexController&apos;, [&apos;$scope&apos;, function($scope) &#123;</div><div class="line">        $scope.friends = [</div><div class="line">          &apos;小花&apos;,</div><div class="line">          &apos;隔壁老王&apos;,</div><div class="line">          &apos;李四&apos;</div><div class="line">        ]</div><div class="line">      &#125;])</div><div class="line">      .controller(&apos;LoginController&apos;, [&apos;$scope&apos;, function($scope) &#123;</div><div class="line">        $scope.username = &apos;&apos;</div><div class="line">        $scope.password = &apos;&apos;</div><div class="line">        $scope.login = function() &#123;</div><div class="line">          console.log($scope.username, $scope.password)</div><div class="line">        &#125;</div><div class="line">      &#125;])</div><div class="line">      .controller(&apos;RegisterController&apos;, [&apos;$scope&apos;, function($scope) &#123;</div><div class="line">        $scope.username = &apos;&apos;</div><div class="line">        $scope.password = &apos;&apos;</div><div class="line">        $scope.email = &apos;&apos;</div><div class="line">        $scope.register = function() &#123;</div><div class="line">          console.log($scope.username, $scope.password, $scope.email)</div><div class="line">        &#125;</div><div class="line">      &#125;])</div></pre></td></tr></table></figure>
+<h2 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;body ng-app=&quot;DemoApp&quot; ng-controller=&quot;DemoController&quot;&gt;</div><div class="line">  &lt;!-- 默认会把指令中的模板放到 div 里面 --&gt;</div><div class="line">  &lt;div hello-world&gt;&lt;/div&gt;</div><div class="line">  &lt;script src=&quot;bower_components/angular/angular.js&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;script&gt;</div><div class="line">    // 在 ng 中，只要是自定义的东西，就一定是要挂载给模块的，都可以通过 模块.自定义过滤器、服务、控制器、指令</div><div class="line">    angular.module(&apos;DemoApp&apos;, [])</div><div class="line">      // 指令的名称，如果是驼峰命名法，那么在使用的时候，就要以 - 来分割指令名称单词</div><div class="line">      .directive(&apos;helloWorld&apos;, [function () &#123;</div><div class="line">        return &#123;</div><div class="line">          template: &apos;&lt;h1&gt;&#123;&#123;foo&#125;&#125;&lt;/h1&gt;&apos;</div><div class="line">        &#125;</div><div class="line">      &#125;])</div><div class="line">      .controller(&apos;DemoController&apos;, [&apos;$scope&apos;, function ($scope) &#123;</div><div class="line">        $scope.foo = &apos;hello world&apos;</div><div class="line">      &#125;])</div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/12/06/AnjularJs/" itemprop="url">
                   AnjularJs
                 </a>
@@ -1222,171 +1474,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/02/14/关于bower的使用/" itemprop="url">
-                  关于bower的使用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2015-02-14T23:29:02+08:00" content="2015-02-14">
-              2015-02-14
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="使用-bower-管理库"><a href="#使用-bower-管理库" class="headerlink" title="使用 bower 管理库"></a>使用 bower 管理库</h1><h2 id="bower-客户端库管理工具"><a href="#bower-客户端库管理工具" class="headerlink" title="bower 客户端库管理工具"></a>bower 客户端库管理工具</h2><p>bower 是一个适用于 web 端第三方包的自动化解决方案</p>
-<ul>
-<li>安装包<ul>
-<li>自动安装依赖项</li>
-</ul>
-</li>
-<li>卸载包</li>
-<li>更新包</li>
-<li>查找包</li>
-<li>保存依赖项</li>
-</ul>
-<h3 id="bower-的安装"><a href="#bower-的安装" class="headerlink" title="bower 的安装"></a>bower 的安装</h3><ul>
-<li>基于 node 环境</li>
-<li>基于 npm 包管理工具<ul>
-<li>基于 node 开发的一个包管理工具</li>
-<li>npm -v</li>
-<li>npm 在安装 node 时就被自动安装了</li>
-</ul>
-</li>
-<li>基于 git 环境</li>
-<li>npm install –global bower<ul>
-<li>在任意目录都可以直接执行</li>
-<li>安装 bower ，其实就是 npm 下的一个分项</li>
-<li>在全局安装一个命令行软件（cli）</li>
-<li>安装结束后通过 bower –version 查看版本，确认是否安装成功</li>
-<li>或者 工具名 –help 可以查看帮助</li>
-</ul>
-</li>
-</ul>
-<h3 id="bower-基本使用"><a href="#bower-基本使用" class="headerlink" title="bower 基本使用"></a>bower 基本使用</h3><ul>
-<li>bower install 包名<ul>
-<li>在哪个项目下执行，这个包就安装到哪个项目根路径</li>
-<li>当下载成功时，默认安到项目根路径下的 bower_components 中</li>
-<li>这些包都是从 github 上下载的最新稳定版本</li>
-</ul>
-</li>
-<li>bower uninstall 包名<ul>
-<li>卸载包</li>
-</ul>
-</li>
-<li>bower init<ul>
-<li>保存依赖</li>
-<li>在目录下生成 bower.json</li>
-<li>记录该项目所依赖的所有包</li>
-<li>即便不小心删除了 bower_components ，也可以通过 bower.json 恢复</li>
-</ul>
-</li>
-<li>bower install<ul>
-<li>只要 bower.json 存在，即可重新全部安装保存的依赖包</li>
-<li>上传到 github 时，不需要传包，只要上传 bower.json </li>
-<li>别人要下载时，先 bower install 安装依赖</li>
-</ul>
-</li>
-<li>bower install –save<ul>
-<li>将安装的包添加到 bower.json 中的依赖项中</li>
-<li>不加 –save 的话，下载包之后 bower.json 中没有记录</li>
-</ul>
-</li>
-<li>.bowerrc 文件<ul>
-<li>该文件必须放到项目根路径下，即执行 bower 命令所处的文件目录</li>
-<li>可以用来配置 bower 的默认行为，例如可以修改安装包的默认路径</li>
-</ul>
-</li>
-<li>bower install 包名 –offline<ul>
-<li>离线下载</li>
-<li>bower 对下载过的包有缓存记录，可以离线下载</li>
-</ul>
-</li>
-</ul>
-<h2 id="bower-json-文件中的-dependencies"><a href="#bower-json-文件中的-dependencies" class="headerlink" title="bower.json 文件中的 dependencies"></a>bower.json 文件中的 dependencies</h2><p>dependencies字段指定了项目运行所依赖的模块， 它们都指向一个对象。<br>该对象的各个成员，分别由模块名和对应的版本要求组成，表示依赖的模块及其版本范围</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&quot;dependencies&quot;: &#123;</div><div class="line">  &quot;angular&quot;: &quot;^1.5.8&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p>一个包管理工具：node 包和前端包，他包含了 bower 的所有功能</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1432,7 +1519,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
